@@ -13,7 +13,8 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.new(book_params)
-    if @book.save
+    if @book.valid?
+      @book.save!
       redirect_to book_path(@book), notice: "Book was successfully added"
     else
       render :new

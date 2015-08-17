@@ -1,5 +1,14 @@
 <h1>
   <%= (@book.title).titleize %>
 </h1>
-
+<p>
+  <%= @book.author.titleize %> <br>
+  <%= @book.genre.upcase %> <br>
+</p>
+<p>
+  <%= @book.publisher.titleize %> <br>
+  <%= @book.pub_date %> <br>
+  <%= @book.format.upcase %>
+</p>
+<h2>Book Description</h2>
 <%= simple_format h(@book.summary) %>
