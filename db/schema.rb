@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150817182602) do
+ActiveRecord::Schema.define(version: 20150817224556) do
 
   create_table "books", force: :cascade do |t|
     t.string "title"
@@ -22,6 +22,13 @@ ActiveRecord::Schema.define(version: 20150817182602) do
     t.string "publisher"
     t.text   "summary"
     t.string "isbn"
+  end
+
+  create_table "places", force: :cascade do |t|
+    t.string "name"
+    t.string "region"
+    t.float  "latitude"
+    t.float  "longitude"
   end
 
   create_table "users", force: :cascade do |t|
