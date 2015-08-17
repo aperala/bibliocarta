@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Book, type: :model do
 
-  # let(:test_book) { create(:book) }
+  let(:test_book) { create(:book) }
   
   describe "isbn_validations" do
     it "is invalid if isbn is > 13 digits" do
@@ -25,6 +25,15 @@ RSpec.describe Book, type: :model do
       test_book = FactoryGirl.build(:book, isbn: "0465026567A")
       expect(test_book).not_to be_valid
     end
+  end
+
+  describe "validations" do
+
+    it "is invalid if title is blank" do
+      test_book = FactoryGirl.build(:book, title: "")
+      expect(test_book.valid?).to eq(false)
+    end
+
   end
 
 end
