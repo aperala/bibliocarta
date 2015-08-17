@@ -1,0 +1,46 @@
+<%= form_for @book do |f| %>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :author %>
+    <%= f.text_field :author, placeholder: "First Name Last Name" %>
+  </p>
+
+  <p>
+    <%= f.label :isbn %>
+    <%= f.text_field :isbn, placeholder: "Enter a 10- or 13-digit ISBN without dashes" %>
+  </p>
+
+  <p>
+    <%= f.label :pub_date %>
+    <%= f.text_field :pub_date, placeholder: "e.g., 2011" %>
+  </p>
+
+  <p>
+    <%= f.label :genre %>
+    <%= f.text_field :genre, placeholder: "e.g., fiction, nonfiction, travel writing" %>
+  </p>
+
+  <p>
+    <%= f.label :format %>
+    <%= f.text_field :format, placeholder: "hc, pb, e-book" %>
+  </p>
+
+  <p>
+    <%= f.label :publisher %>
+    <%= f.text_field :publisher %>
+  </p>
+
+  <p>
+    <%= f.label :summary %><br>
+    <%= f.text_area :summary, placeholder: "Enter a brief description here" %>
+  </p>
+
+  <p>
+    <%= f.submit :submit %>
+  </p>
+
+<% end %>
