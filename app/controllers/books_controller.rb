@@ -12,7 +12,6 @@ class BooksController < ApplicationController
   end
 
   def create
-    #Admin if statement to be added
     @book = Book.new(book_params)
     if @book.save
       redirect_to book_path(@book), notice: "Book was successfully added"
