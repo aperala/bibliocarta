@@ -1,28 +1,3 @@
 <h1>Admin Only: Enter a new place</h1>
 
-<%= form_for @place do |f| %>
-  <p>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </p>
-
-  <p>
-    <%= f.label :region %>
-    <%= select_tag(:region, options_for_select([['Americas'], ['Europe'], ['Africa'], ['Asia'], ['Australia/S. Pacific'], ['Antarctica']])) %>
-  </p>
-
-  <p>
-    <%= f.label :latitude %>
-    <%= f.text_field :latitude %>
-  </p>
-
-  <p>
-    <%= f.label :longitude %>
-    <%= f.text_field :longitude %>
-  </p>
-
-  <p>
-    <%= f.submit :submit %>
-  </p>
-
-<% end %>
+<%= render 'form' %>
