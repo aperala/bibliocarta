@@ -1,0 +1,16 @@
+<h1>
+  <%= @user.username + "'s Passport" %>
+</h1>
+<p>
+  Based in:
+  <%= @user.location %>
+</p>
+
+<% @user.books.each do |book| %>
+    <%= book.title.titleize %>
+    <%= book.author.titleize %>
+    <% book.places.each do |place| %> 
+      <%= place.name.titleize %> <br>
+    <% end %>
+  
+<% end %>
