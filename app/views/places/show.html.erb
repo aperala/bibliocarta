@@ -1,0 +1,12 @@
+<h1>
+  <%= @place.name %>
+</h1>
+
+<p>
+  <%= @place.region %>
+</p>
+
+<% @place.books.each do |book| %>
+  <%= book.title %>
+  
+<% end %>
