@@ -11,9 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150818192146) do
+ActiveRecord::Schema.define(version: 20150818215426) do
 
-  create_table "book_places", id: false, force: :cascade do |t|
+  create_table "book_places", force: :cascade do |t|
     t.integer "book_id",  null: false
     t.integer "place_id", null: false
   end
@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 20150818192146) do
     t.float  "longitude"
   end
 
-  create_table "user_books", id: false, force: :cascade do |t|
+  create_table "user_books", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "book_id", null: false
     t.boolean "read"
