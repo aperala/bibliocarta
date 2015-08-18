@@ -1,0 +1,25 @@
+<h1>
+  <%= @place.name %>
+</h1>
+
+<p>
+  <%= @place.region %>
+</p>
+
+<% @place.books.each do |book| %>
+
+  <h3>
+    <%= (book.title).titleize %>
+  </h3>
+  <p>
+    <%= book.author.titleize %> <br>
+    <%= book.genre.upcase %> <br>
+  </p>
+  <p>
+    <%= book.publisher.titleize %> <br>
+    <%= book.pub_date %> <br>
+    <%= book.format.upcase %>
+  </p>
+  <%= simple_format h(book.summary) %>
+  
+<% end %>

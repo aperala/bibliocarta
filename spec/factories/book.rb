@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :book do
-    title "Godel Escher Bach"
-    author "Douglas Hofstader"
+    title "Test Book"
+    author "Test Author"
     pub_date 2008 
     genre "nonfiction"
     format "pb"
