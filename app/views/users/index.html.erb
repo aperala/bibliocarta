@@ -1,8 +1,8 @@
 <h1>Users Index Page</h1>
 
-<% @users.each do |user| %>
-  <%= user.username %>
-  <%= user.location %>
-  <%= user.books.length %>
+<% @users.order("location asc").each do |user| %>
+  <%= user.username.upcase %>
+  <%= user.location.titleize %>
+  Books: <%= user.books.length %>
   <br>
 <% end %>

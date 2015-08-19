@@ -1,7 +1,7 @@
 <h1>
   <%= @book.title.titleize %>
 </h1>
-<%= button_to "Add to my passport", user_books_path(book_id: @book.id), method: :post, remote: true, id:"add-button" %>
+<%= button_to "Add to my passport", user_books_path(book_id: @book.id), method: :post, remote: true %>
 <div id="checked-book" style="display:none; background-color: SkyBlue;">This book has been added to your passport</div>
 
 <p>
