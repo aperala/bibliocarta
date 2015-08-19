@@ -7,11 +7,11 @@ class Book < ActiveRecord::Base
   validates_presence_of :title
 
   def add(place)
-    self.places << place
+    places << place
   end
 
   def toss(place)
-    self.places.destroy(place)
+    places.destroy(place)
   end
 
 end
