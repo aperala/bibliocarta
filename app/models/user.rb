@@ -5,12 +5,14 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :user_books, dependent: :destroy
-  has_many :books, through: :user_books
+  has_many :books, -> { uniq }, through: :user_books
   has_many :places, through: :books
 
   def add(book)
-    return if user.books.include?(book)
-    user.books << book
+    self.books << book
   end
 
+  def toss(book)
+    self.books.destroy(book)
+  end
 end
