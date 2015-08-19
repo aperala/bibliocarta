@@ -1,2 +1,9 @@
-<h1>Books#index</h1>
-<p>Featured Books Here</p>
+<h1>Books from Everywhere</h1>
+
+<% @books.each do |book| %>
+   <%= link_to book.title.titleize, book_path(book) %>
+    <% book.places.each do |place| %> 
+      <%= place.name.titleize %>
+    <% end %>
+  <br>
+<% end %>
