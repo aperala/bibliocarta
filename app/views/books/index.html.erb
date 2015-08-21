@@ -1,7 +1,8 @@
 <h1>Books from Everywhere</h1>
 
 <% @books.each do |book| %>
-   <%= link_to book.title.titleize, book_path(book) %>
+  <%= image_tag(book.avatar.url(:thumb)) %>
+  <%= link_to book.title.titleize, book_path(book) %>
     <% book.places.each do |place| %> 
       <%= place.name.titleize %>
     <% end %>

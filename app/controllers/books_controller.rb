@@ -17,6 +17,7 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
     if @book.valid?
+      @book.avatar_remote_url("http://covers.openlibrary.org/b/isbn/#{@book.isbn}-M.jpg")
       @book.save!
       redirect_to book_path(@book), notice: "Book was successfully added"
     else
@@ -29,6 +30,8 @@ class BooksController < ApplicationController
 
   def update
     if @book.update(book_params)
+      @book.avatar_remote_url("http://covers.openlibrary.org/b/isbn/#{@book.isbn}-M.jpg")
+      @book.save!
       redirect_to @book, notice: "Book was successfully updated"
     else
       render :edit
@@ -46,6 +49,6 @@ class BooksController < ApplicationController
   end
 
   def book_params
-    params.require(:book).permit(:title, :author, :isbn, :pub_date, :genre, :format, :publisher, :summary)
+    params.require(:book).permit(:title, :author, :isbn, :pub_date, :genre, :format, :publisher, :summary, :avatar)
   end
 end
