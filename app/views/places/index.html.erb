@@ -1,9 +1,16 @@
-<h1>All Locations</h1>
+<div id="map-container">
+  <div id="map">
+  
+  </div>
+</div>
 
-<% @places.order("region asc").each do |place| %>
-  <%= place.name.titleize %>
-  Books: <%= place.books.length %>
-  <br>
-<% end %>
+<div>
+  <h1>All Locations</h1>
+  <% @places.order("region asc").each do |place| %>
+    <%= place.name.titleize %>
+    Books: <%= place.books.length %>
+    <br>
+  <% end %>
+</div>
 
 

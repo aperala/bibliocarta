@@ -9,5 +9,5 @@ _System dependencies:_
   * 'isbn_validation', '~> 1.2.0'
   * 'paperclip', '~> 4.3'
   * 'geocoder'
-
+  * 'leaflet-rails'
 
