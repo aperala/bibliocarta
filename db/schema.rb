@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150818215426) do
+ActiveRecord::Schema.define(version: 20150820194508) do
 
   create_table "book_places", force: :cascade do |t|
     t.integer "book_id",  null: false
@@ -22,14 +22,18 @@ ActiveRecord::Schema.define(version: 20150818215426) do
   add_index "book_places", ["place_id"], name: "index_book_places_on_place_id"
 
   create_table "books", force: :cascade do |t|
-    t.string "title"
-    t.string "author"
-    t.date   "pub_date"
-    t.string "genre"
-    t.string "format",    default: "pb"
-    t.string "publisher"
-    t.text   "summary"
-    t.string "isbn"
+    t.string   "title"
+    t.string   "author"
+    t.date     "pub_date"
+    t.string   "genre"
+    t.string   "format",              default: "pb"
+    t.string   "publisher"
+    t.text     "summary"
+    t.string   "isbn"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   create_table "places", force: :cascade do |t|
@@ -64,6 +68,10 @@ ActiveRecord::Schema.define(version: 20150818215426) do
     t.string   "username"
     t.string   "location"
     t.boolean  "curator",                default: false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
