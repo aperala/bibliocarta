@@ -23,5 +23,13 @@ body {
   padding:0;
 }
 
+.leaflet-popup-content {
+  background-color: #4D4D4D;
+  color: #A9DAA9;
+  border: none;
+  border-radius: 10px;
+}
+
+/*mapbox map styling*/
 #map { position:absolute; top:0; bottom:0; height: 100%; width:100%; }
 

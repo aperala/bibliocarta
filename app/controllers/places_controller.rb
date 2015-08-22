@@ -14,9 +14,10 @@ class PlacesController < ApplicationController
           coordinates: [place.longitude, place.latitude]
           },
           properties: {
+            id: place.id,
             name: place.name,
             books: place.books.length,
-            :'marker-color' => '#f86767',
+            :'marker-color' => '#29A329',
             :'marker-symbol' => 'library',
             :'marker-size' => 'small'
           }
