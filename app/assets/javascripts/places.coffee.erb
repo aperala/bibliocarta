@@ -18,9 +18,13 @@ $ ->
 
     $.getJSON '/places.json', (geojson) ->
       L.mapbox.accessToken = '<%= Rails.application.secrets.mapbox_token %>'
-      # L.mapbox.accessToken = '<%= ENV["MAPBOX_TOKEN"] %>'
-      # L.mapbox.accessToken = 'pk.eyJ1IjoiYW5pdGFwIiwiYSI6ImU3ZGNjYTg0OGFlODAzNzRmZWRkNjQ0NDQzOGExZDJhIn0.guLXPMbKlm5LoUZXIKkmcw'
-      map = L.mapbox.map('map', 'anitap.n7n00g62')
-                    .setView([40.7126, 74.0059], 2)
+      map = L.mapbox.map('map', 'anitap.n7n00g62', tileLayer:
+                        continuousWorld: false
+                        noWrap: true
+                        )
+                    .setView([40, 0], 2)
                     .on('layeradd', setPopups)
                     .featureLayer.setGeoJSON(geojson)
+                    .dragging.disable()
+                    .touchZoom.disable()
+      
