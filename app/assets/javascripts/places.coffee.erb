@@ -5,9 +5,10 @@ $ ->
       properties = marker.feature?.properties
 
       popupContent = '<div class="popup">' +
-                        
+                        '<a href="/places/' + properties?.id + '">' + 
                         '<h4>' + properties?.name + '</h4>' +
-                        '<p>' + properties?.books + ' books</p>' +
+                        '</a>' +
+                        '<p>' + properties?.books + ' items found</p>' +
                       '</div>'
 
       if marker.bindPopup?
@@ -21,10 +22,12 @@ $ ->
       map = L.mapbox.map('map', 'anitap.n7n00g62', tileLayer:
                         continuousWorld: false
                         noWrap: true
+                        zoomControl: false
                         )
                     .setView([40, 0], 2)
                     .on('layeradd', setPopups)
                     .featureLayer.setGeoJSON(geojson)
                     .dragging.disable()
                     .touchZoom.disable()
+                    .scrollWheelZoom.disable()
       

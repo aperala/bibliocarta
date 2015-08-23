@@ -1,17 +1,19 @@
+
+<%= image_tag(@user.avatar.url(:thumb)) %>
 <h1>
-  <%= image_tag(@user.avatar.url(:thumb)) %>
-  <%= @user.username + "'s Passport" %>
+  Name: <%= @user.username %>
 </h1>
 <p>
-  Based in:
+  Location:
   <%= @user.location %>
 </p>
 
 <% @user.books.each do |book| %>
     <%= book.title.titleize %>
     <%= book.author.titleize %>
-    <% book.places.each do |place| %> 
-      <%= place.name.titleize %> 
-    <% end %>
-  <br>
+    <br>
 <% end %>
+
+<div id="map">
+ 
+</div>
