@@ -1,9 +1,8 @@
 <div id="places-index">
-  <h1>Where are you going?</h1>
-  <% @places.order("name asc").each do |place| %>
-    <%= link_to place.name, place_path(place)  %>
-    <br>
-  <% end %>
+  <div class="side">
+    <h1>Where are you going?</h1>
+    <p>Locate your destination on the map and click to find books.</p>
+  </div>
 </div>
 
 <div id="map">

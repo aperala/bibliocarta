@@ -24,14 +24,19 @@ body {
 }
 
 .leaflet-popup-content {
-  background-color: #4D4D4D;
-  color: #A9DAA9;
+  background-color: #A9DAA9;
   border: none;
   border-radius: 10px;
 }
 
+.side {
+  width: 70%;
+  margin: 0 auto;
+}
+
 /*mapbox map styling*/
 #map { position:absolute; right: 0; top:0; bottom:0; width: 80%; }
+#map_user { position:absolute; right: 0; top:0; bottom:0; width: 80%; }
 
 #places-index { 
   position: absolute;
