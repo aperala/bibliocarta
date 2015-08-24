@@ -13,7 +13,7 @@ $ ->
         closeButton: true
         minWidth: 200
 
-  $.getJSON '<%= Rails.application.routes.url_helpers.user_path([:id]) %>'.json, (geojsonshow) ->
+  $.getJSON '<%= Rails.application.routes.url_helpers.user_path([:id]) %>'.json, (geojsonuser) ->
     L.mapbox.accessToken = '<%= Rails.application.secrets.mapbox_token %>'
     map = L.mapbox.map('map_user', 'anitap.n7n00g62', tileLayer:
                       continuousWorld: false
@@ -21,6 +21,6 @@ $ ->
                       )
                   .setView([40, 0], 2)
                   .on('layeradd', setPopups)
-                  .featureLayer.setGeoJSON(geojsonshow)
+                  .featureLayer.setGeoJSON(geojsonuser)
                   .dragging.disable()
                   .touchZoom.disable()

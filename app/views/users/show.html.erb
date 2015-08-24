@@ -8,17 +8,13 @@
     <%= @user.location %>
   </p>
   <p>
-    <% @user.books.each do |book| %>
-        <%= book.title.titleize %>
+    <% @user.books.order("title asc").each do |book| %>
+        <%= book.title.titleize %> by 
         <%= book.author.titleize %>
         <br>
     <% end %>
   </p>
 </div>
-
-<%= content_tag "div", data: {userId: @user.id} do %>
-  Loading user...
-<% end %>
 
 <div id="map_user">
 

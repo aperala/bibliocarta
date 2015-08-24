@@ -6,10 +6,10 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(params[:id])
-    @geojsonshow = Array.new
+    @geojsonuser = Array.new
 
     @user.places.each do |place|
-      @geojsonshow << {
+      @geojsonuser << {
         type: 'Feature',
         geometry: {
           type: 'Point',
@@ -26,7 +26,7 @@ class UsersController < ApplicationController
     end
     respond_to do |format|
       format.html
-      format.json { render json: @geojsonshow }
+      format.json { render json: @geojsonuser }
     end
 
   end
