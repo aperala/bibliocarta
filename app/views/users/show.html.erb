@@ -1,17 +1,21 @@
-<h1>
+<div id="places-index">
   <%= image_tag(@user.avatar.url(:thumb)) %>
-  <%= @user.username + "'s Passport" %>
-</h1>
-<p>
-  Based in:
-  <%= @user.location %>
-</p>
-
-<% @user.books.each do |book| %>
-    <%= book.title.titleize %>
-    <%= book.author.titleize %>
-    <% book.places.each do |place| %> 
-      <%= place.name.titleize %> 
+  <h1>
+    Name: <%= @user.username %>
+  </h1>
+  <p>
+    Location:
+    <%= @user.location %>
+  </p>
+  <p>
+    <% @user.books.order("title asc").each do |book| %>
+        <%= book.title.titleize %> by 
+        <%= book.author.titleize %>
+        <br>
     <% end %>
-  <br>
-<% end %>
+  </p>
+</div>
+
+<div id="map_user">
+
+</div>

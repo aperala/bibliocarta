@@ -1,9 +1,10 @@
-<h1>All Locations</h1>
+<div id="places-index">
+  <div class="side">
+    <h1>Where are you going?</h1>
+    <p>Locate your destination on the map and click to find books.</p>
+  </div>
+</div>
 
-<% @places.order("region asc").each do |place| %>
-  <%= place.name.titleize %>
-  Books: <%= place.books.length %>
-  <br>
-<% end %>
-
-
+<div id="map">
+ 
+</div>

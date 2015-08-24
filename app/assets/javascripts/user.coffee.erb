@@ -1,0 +1,26 @@
+$ -> 
+
+  setPopups = (e) ->
+    marker = e.layer
+    properties = marker.feature?.properties
+
+    popupContent = '<div class="popup">' +
+                      '<h4>' + properties?.name + '</h4>' +
+                    '</div>'
+
+    if marker.bindPopup?
+      marker.bindPopup popupContent,
+        closeButton: true
+        minWidth: 200
+
+  $.getJSON '<%= Rails.application.routes.url_helpers.user_path([:id]) %>'.json, (geojsonuser) ->
+    L.mapbox.accessToken = '<%= Rails.application.secrets.mapbox_token %>'
+    map = L.mapbox.map('map_user', 'anitap.n7n00g62', tileLayer:
+                      continuousWorld: false
+                      noWrap: true
+                      )
+                  .setView([40, 0], 2)
+                  .on('layeradd', setPopups)
+                  .featureLayer.setGeoJSON(geojsonuser)
+                  .dragging.disable()
+                  .touchZoom.disable()

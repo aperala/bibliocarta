@@ -1,8 +1,33 @@
 class PlacesController < ApplicationController
   before_action :set_place, only: [:show, :edit, :update, :destroy]
+  respond_to :html, :js
 
   def index
     @places = Place.all
+    @geojson = Array.new
+
+    @places.each do |place|
+      @geojson << {
+        type: 'Feature',
+        geometry:{
+          type: 'Point',
+          coordinates: [place.longitude, place.latitude]
+          },
+          properties: {
+            id: place.id,
+            name: place.name,
+            books: place.books.length,
+            :'marker-color' => '#29A329',
+            :'marker-symbol' => 'library',
+            :'marker-size' => 'small'
+          }
+      }
+    end
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @geojson }
+    end
   end
 
   def show
