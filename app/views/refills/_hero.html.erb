@@ -1,0 +1,11 @@
+<div class="hero">
+	<div class="hero-inner">
+		<div class="hero-copy">
+			<h1>BiblioCarta</h1>
+			<h2>Find books by location & map your own reading list</h2>	
+		</div>
+    <% if !user_signed_in? %>
+      <%= button_to "Sign up", new_user_registration_path, method: :get %>
+    <% end %>
+	</div>
+</div>
