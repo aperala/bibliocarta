@@ -1,8 +1,13 @@
 fieldset {
   background-color: lighten($base-border-color, 10%);
   border: $base-border;
-  margin: 0 0 $small-spacing;
+  width: 60%;
+  margin: 0 auto $small-spacing;
   padding: $base-spacing;
+
+    h2 {
+      text-align: center;
+    }
 }
 
 input,
@@ -46,7 +51,7 @@ textarea {
   }
 
   &:focus {
-    border-color: $action-color;
+    border-color: $green;
     box-shadow: $form-box-shadow-focus;
     outline: none;
   }

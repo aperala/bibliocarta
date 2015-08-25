@@ -3,6 +3,7 @@ class PlacesController < ApplicationController
   respond_to :html, :js
 
   def index
+    @title = "Bookmark - World Map"
     @places = Place.all
     @geojson = Array.new
 
@@ -31,6 +32,7 @@ class PlacesController < ApplicationController
   end
 
   def show
+    @title = @place.name.titleize
   end
 
   def new

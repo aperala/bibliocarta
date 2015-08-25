@@ -1,5 +1,5 @@
 nav {
-  background-color: #2c3e50;
+  background-color: $dark-gray;
 }
 
 .dropdown {
@@ -7,7 +7,7 @@ nav {
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-line-height: 1.5em !default;
-  $base-background-color: #2c3e50;
+  $base-background-color: $dark-gray;
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
   $base-font-color: white;
@@ -39,6 +39,10 @@ nav {
     display: inline-block;
     position: relative;
     text-align: center;
+
+      img {
+        vertical-align: middle;
+      }
   }
 
   .dropdown-description {
@@ -85,7 +89,7 @@ nav {
 
   .dropdown-button:hover {
     background-color: $dropdown-background-hover;
-    color: #f0c84b;
+    color: $gold;
   }
 
   .dropdown-button:after {
@@ -136,7 +140,7 @@ nav {
     padding: $dropdown-padding / 2;
 
       &:hover {
-        color: #f0c84b;
+        color: $gold;
       }
   }
 

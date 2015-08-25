@@ -2,7 +2,8 @@
   <div class="dropdown">
     <div class="dropdown-container">
       <p class="dropdown-description">
-        <a href="/">BiblioCarta </a> |
+        <a href="/", class="dropdown-link"><img src="/assets/home-icon.png" alt="">
+        </a> |
         <% if current_user %>
           Signed in as <%= current_user.username || current_user.email %>
         <% end %>
