@@ -94,3 +94,37 @@ div.place-links {
       margin-right: 30%;
     }
 }
+
+
+#places-index { 
+  position: absolute;
+  left: 0; 
+  top: 0; 
+  bottom: 0; 
+  width: 20%; 
+  background-color: $dark-gray; 
+  color: white;
+
+    a {
+  color: white;
+  text-decoration: none;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    text-align: center;
+    color: $gold;
+  }
+
+  hr {
+    color: silver;
+  }
+
+  .side {
+  width: 70%;
+  margin: 20px 5px 0 18px;
+  overflow: scroll;
+  font-size: 1.2em;
+  }
+
+}
