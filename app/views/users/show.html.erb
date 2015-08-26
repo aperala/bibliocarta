@@ -12,7 +12,12 @@
     </p>
     <p>
       Total locations: <%= @user.places.length %> <br>
-      Total books: <%= @user.books.length %>
+      Total books: <%= @user.books.length %> 
+    <p> 
+      <% if @user == current_user %>
+        <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Check%20out%20my%20Bookmark%20map.">Tweet</a>
+      <% end %>
+    </p>
       <hr>
       <% @user.books.order("title asc").each do |book| %>
           <span class="book-title"><%= book.title.titleize %></span> by 
