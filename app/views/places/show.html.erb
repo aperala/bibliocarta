@@ -1,4 +1,4 @@
-<%= render 'shared/nav' %>
+<%= render 'refills/navigation' %>
 <div class="side-image">
   <div class="images-wrapper"></div>
     <div class="side-image-content">
@@ -13,7 +13,7 @@
   
   <% @place.books.each do |book| %>
     <div class="book-index-card">
-      <%= image_tag(book.avatar.url(:thumb), class: "small-cover") %>
+      <%= image_tag(book.avatar.url(:thumb), class: "small-cover") %> 
       <div class="title-info">
         <h3>
           <%= link_to (book.title).titleize, book_path(book.id), target: "_blank" %>
