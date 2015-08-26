@@ -1,7 +1,3 @@
-nav {
-  background-color: $dark-gray;
-}
-
 .dropdown {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
@@ -26,7 +22,7 @@ nav {
 
   $dropdown-color: $base-font-color;
   $dropdown-description-color: lighten($dropdown-color, 40%);
-  $dropdown-border: 1px solid silver;
+  $dropdown-border: 1px solid gray;
   $dropdown-background: $base-background-color;
   $dropdown-background-hover: darken($dropdown-background, 3%);
   $dropdown-inner-border: 1px solid silver;
@@ -38,7 +34,7 @@ nav {
   .dropdown-container {
     display: inline-block;
     position: relative;
-    text-align: center;
+    margin-left: 10px;
 
       img {
         vertical-align: middle;
@@ -112,9 +108,9 @@ nav {
     display: none;
     overflow: show;
     position: absolute;
-    right: 0;
+    left: 0;
     top: $dropdown-distance-from-menu;
-    width: 228px;
+    width: 200px;
     z-index: 99999;
 
     &:before {

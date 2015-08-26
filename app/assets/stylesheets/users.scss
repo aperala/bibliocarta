@@ -92,3 +92,14 @@
     }
   }
 }
+
+// show view
+.user-profile {
+  margin: 20px 5px 0 15px;
+  overflow: scroll;
+  font-size: 1.2em;
+
+    .book-title {
+    font-style: italic;
+  }
+}

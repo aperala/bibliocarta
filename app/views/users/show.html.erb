@@ -1,19 +1,26 @@
 <div id="places-index">
-  <%= image_tag(@user.avatar.url(:thumb)) %>
-  <h1>
-    Name: <%= @user.username %>
-  </h1>
-  <p>
-    Location:
-    <%= @user.location %>
-  </p>
-  <p>
-    <% @user.books.order("title asc").each do |book| %>
-        <%= book.title.titleize %> by 
-        <%= book.author.titleize %>
-        <br>
-    <% end %>
-  </p>
+  <%= render 'shared/nav' %>
+
+  <div class="user-profile">
+    <%= image_tag(@user.avatar.url(:thumb)) %>
+    <h1>
+      <%= @user.username %>
+    </h1>
+    <p>
+      Home:
+      <%= @user.location %>
+    </p>
+    <p>
+      Total locations: <%= @user.places.length %> <br>
+      Total books: <%= @user.books.length %>
+      <hr>
+      <% @user.books.order("title asc").each do |book| %>
+          <span class="book-title"><%= book.title.titleize %></span> by 
+          <%= book.author.titleize %>
+          <br>
+      <% end %>
+    </p>
+  </div>
 </div>
 
 <div id="map_user">
