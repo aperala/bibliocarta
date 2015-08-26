@@ -8,21 +8,23 @@ class PlacesController < ApplicationController
     @geojson = Array.new
 
     @places.each do |place|
-      @geojson << {
-        type: 'Feature',
-        geometry:{
-          type: 'Point',
-          coordinates: [place.longitude, place.latitude]
-          },
-          properties: {
-            id: place.id,
-            name: place.name,
-            books: place.books.length,
-            :'marker-color' => '#29A329',
-            :'marker-symbol' => 'library',
-            :'marker-size' => 'small'
-          }
-      }
+      if place.books.length >= 1
+        @geojson << {
+          type: 'Feature',
+          geometry:{
+            type: 'Point',
+            coordinates: [place.longitude, place.latitude]
+            },
+            properties: {
+              id: place.id,
+              name: place.name,
+              books: place.books.length,
+              :'marker-color' => '#29A329',
+              :'marker-symbol' => 'library',
+              :'marker-size' => 'small'
+            }
+        }
+      end
     end
 
     respond_to do |format|
