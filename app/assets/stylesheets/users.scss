@@ -94,12 +94,35 @@
 }
 
 // show view
-.user-profile {
-  margin: 20px 5px 0 15px;
-  overflow: scroll;
-  font-size: 1.2em;
+#user-index { 
+  position: absolute;
+  left: 0; 
+  top: 0; 
+  bottom: 0; 
+  width: 20%; 
+  background-color: $dark-gray; 
+  color: white;
 
-    .book-title {
-    font-style: italic;
+    a {
+  color: white;
+  text-decoration: none;
+  }
+
+  .user-profile {
+    margin: 20px 5px 0 15px;
+    overflow: scroll;
+    font-size: 1.2em;
+
+    h1 {
+      color: $gold;
+    }
+
+    hr {
+      width: 80%;
+    }
+
+      .book-title {
+      font-style: italic;
+    }
   }
 }
