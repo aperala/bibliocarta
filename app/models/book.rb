@@ -5,10 +5,11 @@ class Book < ActiveRecord::Base
   has_many :places, -> { uniq }, through: :book_places
   
   validates :isbn,   :isbn_format => true
+  validates_uniqueness_of :isbn
   validates_presence_of :title
 
-  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
-  validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/book-6x.png"
+  validates_attachment_content_type :avatar, :content_type => "application/octet-stream" || /\Aimage\/.*\Z/ 
 
   def avatar_remote_url(url_value)
     self.avatar = URI.parse(url_value)
