@@ -4,6 +4,10 @@ class BooksController < ApplicationController
   def index
     @books = Book.all
     @title = "All Books"
+    respond_to do |format|
+      format.html
+      format.csv {render text: @books.to_csv}
+    end
   end
 
   def show
@@ -12,14 +16,20 @@ class BooksController < ApplicationController
   end
 
   def new
-    @book = Book.new
+    @book = Book.new    
+  end
+
+  def import
+    Book.import(params[:file])
+    redirect_to books_path, notice: "Books imported"
   end
 
   def create
     @book = Book.new(book_params)
     if @book.valid?
-      @book.avatar_remote_url("http://covers.openlibrary.org/b/isbn/#{@book.isbn}-M.jpg")
       @book.save!
+      @book.avatar_remote_url("http://covers.openlibrary.org/b/isbn/#{@book.isbn}-M.jpg")
+      @book.save
       redirect_to book_path(@book), notice: "Book was successfully added"
     else
       render :new
