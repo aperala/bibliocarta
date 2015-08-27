@@ -1,5 +1,6 @@
 class Book < ActiveRecord::Base
   attr_reader :avatar_remote_url
+  after_create :avatar_remote_url
 
   has_many :book_places, dependent: :destroy
   has_many :places, -> { uniq }, through: :book_places
