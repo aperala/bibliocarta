@@ -3,3 +3,12 @@
 <h1 class="form-headline">Enter a New Book</h1>
 
 <%= render 'form' %>
+
+<fieldset>
+  <h2>Import Books from csv file</h2>
+
+  <%= form_tag import_books_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Import" %>
+  <% end %>
+</fieldset>
