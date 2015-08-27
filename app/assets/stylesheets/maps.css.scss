@@ -22,6 +22,14 @@ body {
   color:rgba(255,255,255,0.5);
   }
 
+.custom-popup .popup a {
+  color: #fff;
+
+    &:hover {
+      color: $gold;
+    }
+}
+
 .custom-popup .leaflet-popup-tip-container {
   width:30px;
   height:15px;
