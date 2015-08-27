@@ -62,6 +62,11 @@ class PlacesController < ApplicationController
     end
   end
 
+  def import
+    Place.import(params[:file])
+    redirect_to root_path, notice: "Locations imported"
+  end
+
   private
 
   def set_place

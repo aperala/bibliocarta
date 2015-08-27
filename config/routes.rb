@@ -18,7 +18,10 @@ Rails.application.routes.draw do
     collection { post :import }
   end
 
-  resources :places
+  resources :places do
+    collection { post :import }
+  end
+
   resources :users
   resources :user_books, only: [:create]
   # Example resource route with options:
