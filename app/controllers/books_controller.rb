@@ -27,9 +27,8 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
     if @book.valid?
-      @book.save!
       @book.avatar_remote_url("http://covers.openlibrary.org/b/isbn/#{@book.isbn}-M.jpg")
-      @book.save
+      @book.save!
       redirect_to book_path(@book), notice: "Book was successfully added"
     else
       render :new

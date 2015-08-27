@@ -1,14 +1,11 @@
 <div class="dropdown">
   <div class="dropdown-container">
-    <p class="dropdown-description">
-      <a href="/", class="dropdown-link"><img src="/assets/home-icon.png" alt="">
-      </a>
-    </p>
     <p class="dropdown-button">Menu</p>
       <ul class="dropdown-menu dropdown-select">
       <% if current_user %>
         <li><%= link_to "Home", root_path, class: "dropdown-link" %></li>
         <li><%= link_to "My Page", user_path(current_user), class: "dropdown-link" %></li>
+        <li><%= link_to "Edit my profile", edit_user_registration_path, class: "dropdown-link" %></li>
         <li><%= link_to "Find Books on Map", places_path, class: "dropdown-link"  %></li>
         <li><%= link_to "See All Books", books_path, class: "dropdown-link"  %></li>
         <li><%= link_to "All Users", users_path, class: "dropdown-link" %></li>

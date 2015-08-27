@@ -27,6 +27,10 @@
         </p>
       </div>
       <%= simple_format h(book.summary) %>
+        <div>
+          <%= button_to "Add to my passport", user_books_path(book_id: book.id), method: :post, remote: true %>
+          <div id="checked-book" style="display:none; background-color: SkyBlue;">This book has been added to your passport</div>
+        </div>
     </div>
   <% end %>
  
