@@ -56,10 +56,15 @@ class PlacesController < ApplicationController
 
   def update
     if @place.update(place_params)
-      redirect_to @place, notice: "Location was successfully updated"
+      redirect_to @place, notice: "Location has been updated"
     else
       render :edit
     end
+  end
+
+  def import
+    Place.import(params[:file])
+    redirect_to root_path, notice: "Locations imported"
   end
 
   private

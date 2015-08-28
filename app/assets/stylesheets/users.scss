@@ -28,7 +28,7 @@
   $card-image-hover-opacity: 0.7;
   $card-image-hover-color: #F8F2B4;
 
-  @include flex-basis(15em);
+  @include flex-basis(13em);
   @include flex-grow(1);
   @include transition (all 0.2s ease-in-out);
   background-color: $card-background;
@@ -42,9 +42,9 @@
 
   .card-image {
     overflow: hidden;
-    height: 150px;
-    max-height: 150px;
-    background-color: $card-image-hover-color;
+    height: 180px;
+    max-height: 180px;
+    background-color: $card-background;
 
     img {
       @include transition (all 0.2s ease-in-out);

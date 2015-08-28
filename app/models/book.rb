@@ -1,6 +1,5 @@
 class Book < ActiveRecord::Base
   attr_reader :avatar_remote_url
-  after_create :avatar_remote_url
 
   has_many :book_places, dependent: :destroy
   has_many :places, -> { uniq }, through: :book_places
@@ -9,7 +8,7 @@ class Book < ActiveRecord::Base
   validates_uniqueness_of :isbn
   validates_presence_of :title
 
-  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "book-6x.png"
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/book-6x.png"
   validates_attachment_content_type :avatar, :content_type => [ "application/octet-stream", /\Aimage\/.*\Z/ ]
 
   def avatar_remote_url(url_value)

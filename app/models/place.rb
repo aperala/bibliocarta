@@ -16,4 +16,10 @@ class Place < ActiveRecord::Base
     self.books.destroy(book)
   end
 
+  def self.import(file)
+    CSV.foreach(file.path, headers: true) do |row|
+    Place.create! row.to_hash
+    end
+  end
+
 end

@@ -1,5 +1,13 @@
 <%= render 'refills/navigation' %>
 
-<h1>Admin Only: Enter a new place</h1>
+<h1 class="form-headline">Admin Only: Enter a new place</h1>
 
 <%= render 'form' %>
+
+<fieldset>
+  <h2>Import Locations from csv file</h2>
+  <%= form_tag import_places_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Import" %>
+  <% end %>
+</fieldset>

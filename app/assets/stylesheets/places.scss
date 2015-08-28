@@ -89,6 +89,7 @@ div.book-index-card {
 
 div.place-links {
   @include span-columns(10);
+  font-size: 20px;
 
     a {
       margin-right: 30%;
