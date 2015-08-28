@@ -1,22 +1,24 @@
-<%= render 'shared/nav' %>
+<%= render 'refills/navigation' %>
 
-<h3>Admin: Add books to a place:</h3>
-
-<% @books.each do |book| %>
+<fieldset>
+  <h3>Admin: Add books to a place:</h3>
   
-  <%= book.title %>
-  <%= form_for @book_place, url: {action: "create"}, html: {book_id: book.id} do |f| %>
-  
-  <p>
-    <%= f.label :place %>
-    <%= f.collection_select(:place_id, Place.all, :id, :name) %>
-  </p>
+  <%= form_for @book_place, url: {action: "create"}, method: :post do |f| %>
+    
+    <p>
+      <%= f.label :title %>
+      <%= f.collection_select(:book_id, Book.all, :id, :title) %>
+    </p>
 
-  <p>
-    <%= f.submit :submit %>
-  </p>
+    <p>
+      <%= f.label :place %>
+      <%= f.collection_select(:place_id, Place.all, :id, :name) %>
+    </p>
+
+    <p>
+      <%= f.submit :submit %>
+    </p>
 
   <% end %>
 
-<% end %>
-
+</fieldset>

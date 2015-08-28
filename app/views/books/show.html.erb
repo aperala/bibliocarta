@@ -39,7 +39,7 @@
   </article>
 
   <div class="visa">
-    <%= button_to "Add to my passport", user_books_path(book_id: @book.id), method: :post, remote: true %>
+    <%= button_to "Add to my collection", user_books_path(book_id: @book.id), method: :post, remote: true %>
     <div id="checked-book" style="display:none; background-color: SkyBlue;">This book has been added to your passport</div>
   </div>
 </div>
