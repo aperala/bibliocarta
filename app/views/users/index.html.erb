@@ -6,7 +6,7 @@
   <div class="card">
     <div class="card-image">
       <% if user.avatar.exists? == true %>
-        <%= image_tag(user.avatar.url(:medium)) %>
+        <%= link_to image_tag(user.avatar.url(:medium)), user_path(user) %>
       <% else %>
         <img src="/assets/antique-map.jpg" alt="">
       <% end %>

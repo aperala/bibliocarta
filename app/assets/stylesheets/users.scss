@@ -104,8 +104,12 @@
   color: white;
 
     a {
-  color: white;
-  text-decoration: none;
+  color: $gold;
+  font-weight: bold;
+
+    &:hover {
+      color: $green;
+    }
   }
 
   .user-profile {
