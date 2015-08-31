@@ -5,6 +5,7 @@ $ ->
     properties = marker.feature?.properties
 
     popupContent = '<div class="popup">' +
+                      '<a href="/places/' + properties?.id + '">' +
                       '<h4>' + properties?.name + '</h4>' +
                     '</div>'
 

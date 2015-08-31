@@ -23,7 +23,7 @@ div.book-index-card {
 }
 
 // show path styles
-article {
+article.book-about {
   @include span-columns(8);
 }
 

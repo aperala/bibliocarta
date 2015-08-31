@@ -6,3 +6,10 @@
 @import "maps";
 @import "places";
 @import "users";
+
+.admin-form-headline {
+  color: $red;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 2em;
+}
