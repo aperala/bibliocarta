@@ -26,8 +26,8 @@ $ ->
                         )
                     .setView([40, 0], 2)
                     .on('layeradd', setPopups)
-                    .featureLayer.setGeoJSON(geojson)
                     .dragging.disable()
+                    .featureLayer.setGeoJSON(geojson)
                     .touchZoom.disable()
                     .scrollWheelZoom.disable()
       
