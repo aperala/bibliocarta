@@ -71,3 +71,13 @@
     max-width: 100%;
   }
 }
+
+#photo-credit {
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  padding: 20px 0;
+  text-align: center;
+  background-color: $dark-gray;
+  color: white;
+}
