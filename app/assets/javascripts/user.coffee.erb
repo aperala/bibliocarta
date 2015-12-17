@@ -15,7 +15,7 @@ $ ->
         minWidth: 200
 
   $.getJSON '<%= Rails.application.routes.url_helpers.user_path([:id]) %>'.json, (geojsonuser) ->
-    L.mapbox.accessToken = '<%= Rails.application.secrets.mapbox_token %>'
+    L.mapbox.accessToken = '<%= ENV["MAPBOX_TOKEN"] %>'
     map = L.mapbox.map('map_user', 'anitap.2b45a7d5', tileLayer:
                       continuousWorld: false
                       noWrap: true

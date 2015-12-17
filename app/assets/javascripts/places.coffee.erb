@@ -18,7 +18,7 @@ $ ->
 
 
     $.getJSON '/places.json', (geojson) ->
-      L.mapbox.accessToken = '<%= Rails.application.secrets.mapbox_token %>'
+      L.mapbox.accessToken = '<%= ENV["MAPBOX_TOKEN"] %>'
       map = L.mapbox.map('map', 'anitap.2b45a7d5', tileLayer:
                         continuousWorld: false
                         noWrap: true
