@@ -9,7 +9,7 @@
   $hero-background-bottom: #20392B;
   $hero-color: white;
   $gradient-angle: 10deg;
-  $hero-image: 'idlewild.jpg';
+  $hero-image: 'bookshelves.jpg';
 
   @include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
   background-color: #324766;
@@ -39,15 +39,17 @@
       text-align: center;
       
       h1 {
-        font-size: 4.5em;
-        font-weight: normal;
+        font-size: 6em;
+        font-weight: bold;
+        letter-spacing: 3px;
         margin-bottom: 0.5em;
+        text-transform: uppercase;
         vertical-align: center;
       }
 
       h2 {
         font-size: 2em;
-        font-weight: normal;
+        font-weight: bold;
       }
 
       p {
