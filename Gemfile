@@ -20,6 +20,7 @@ gem 'neat'
 gem 'bitters'
 gem 'refills'
 gem 'figaro'
+gem 'aws-sdk', '< 2.0'
 
 gem 'rails_12factor', group: :production
 
