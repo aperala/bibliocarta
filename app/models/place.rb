@@ -4,9 +4,9 @@ class Place < ActiveRecord::Base
 
   validates :name, uniqueness: true
 
-  geocoded_by :name
+  # geocoded_by :name
 
-  after_validation :geocode, if: :name_changed?
+  # after_validation :geocode, if: :name_changed?
 
   def add(book)
     self.books << book
