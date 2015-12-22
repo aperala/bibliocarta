@@ -1,4 +1,5 @@
 class BookPlacesController < ApplicationController
+  before_filter :is_curator, only: [:new, :create]
 
   def new
     @book_place = BookPlace.new

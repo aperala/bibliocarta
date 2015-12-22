@@ -8,6 +8,13 @@ class ApplicationController < ActionController::Base
     places_path
   end
 
+  helper_method :is_curator
+
+  def is_curator
+    (current_user.nil?) ? redirect_to(root_path) : (redirect_to(root_path) unless current_user.curator?)
+  end
+
+
   protected
 
   def configure_permitted_parameters

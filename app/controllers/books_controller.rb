@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy]
+  before_filter :is_curator, only: [:new, :create, :import, :edit, :destroy]
 
   def index
     @books = Book.all
@@ -61,4 +62,5 @@ class BooksController < ApplicationController
   def book_params
     params.require(:book).permit(:title, :author, :isbn, :genre, :summary, :avatar, :avatar_file_name)
   end
+
 end

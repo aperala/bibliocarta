@@ -1,4 +1,5 @@
 class PlacesController < ApplicationController
+  before_filter :is_curator, only: [:new, :create, :import, :edit]
   before_action :set_place, only: [:show, :edit, :update, :destroy]
   respond_to :html, :js
 

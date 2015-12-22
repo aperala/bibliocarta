@@ -8,7 +8,6 @@
 .cards {
   @include display(flex);
   @include flex-wrap(wrap);
-  @include justify-content(space-between);
   margin-top: 40px;
 }
 
@@ -43,7 +42,7 @@
   .card-image {
     overflow: hidden;
     height: 180px;
-    max-height: 180px;
+    max-height: 200px;
     background-color: $card-background;
 
     img {
