@@ -4,7 +4,7 @@ class PlacesController < ApplicationController
   respond_to :html, :js
 
   def index
-    @title = "Bookmark - World Map"
+    @title = "Bibliocarta - World Map"
     @places = Place.all
     @geojson = Array.new
 

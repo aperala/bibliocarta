@@ -21,9 +21,6 @@
         <p>
           <%= book.author.titleize %> <br>
           <%= book.genre.upcase %> <br>
-          <%= book.publisher.titleize %> <br>
-          <%= book.pub_date %>
-          <%= book.format.upcase %>
         </p>
       </div>
       <%= simple_format h(book.summary) %>

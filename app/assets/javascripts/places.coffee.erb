@@ -5,7 +5,7 @@ $ ->
       properties = marker.feature?.properties
 
       popupContent = '<div class="popup">' +
-                        '<a href="/places/' + properties?.id + '">' + 
+                        '<a href="/places/' + properties?.id + '" target="_blank">' + 
                         '<h4>' + properties?.name + ' (click for more)</h4>' +
                         '</a>' +
                         '<p>' + properties?.books + ' items found</p>' +
@@ -26,8 +26,8 @@ $ ->
                         )
                     .setView([40, 0], 2)
                     .on('layeradd', setPopups)
-                    .dragging.disable()
                     .featureLayer.setGeoJSON(geojson)
+                    .dragging.disable()
                     .touchZoom.disable()
                     .scrollWheelZoom.disable()
       

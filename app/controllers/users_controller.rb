@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(params[:id])
+    @title = "#{@user.username}'s Book Map"
     @geojsonuser = Array.new
 
     @user.places.each do |place|

@@ -1,8 +1,9 @@
 <%= render 'refills/navigation' %>
 
-<fieldset>
-  <h3>Admin: Add books to a place:</h3>
+<h1 class="admin-form-headline">Add books to a place</h1 class="admin-form-headline">
   
+<fieldset>
+
   <%= form_for @book_place, url: {action: "create"}, method: :post do |f| %>
     
     <p>
