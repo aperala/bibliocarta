@@ -9,16 +9,17 @@ class UsersController < ApplicationController
     @title = "#{@user.username}'s Book Map"
     @geojsonuser = Array.new
 
-    @user.places.each do |place|
+    @user.books.each do |book|
       @geojsonuser << {
         type: 'Feature',
         geometry: {
           type: 'Point',
-          coordinates: [place.longitude, place.latitude]
+          coordinates: [book.places.first.longitude, book.places.first.latitude]
           },
           properties: {
-            id: place.id,
-            name: place.name,
+            id: book.places.first.id,
+            name: book.places.first.name,
+            title: book.title.titleize,
             :'marker-color' => '#e74c3c',
             :'marker-symbol' => 'circle',
             :'marker-size' => 'small'

@@ -5,7 +5,7 @@ class PlacesController < ApplicationController
 
   def index
     @title = "Bibliocarta - World Map"
-    @places = Place.all
+    @places = Place.includes(:book_places).where.not(:book_places => {id: nil}).all
     @geojson = Array.new
 
     @places.each do |place|
@@ -20,6 +20,7 @@ class PlacesController < ApplicationController
               id: place.id,
               name: place.name,
               books: place.books.length,
+              title: place.books.first.title.titleize,
               :'marker-color' => '#29A329',
               :'marker-symbol' => 'library',
               :'marker-size' => 'small'
