@@ -22,6 +22,12 @@
     <h2>About the Book</h2>
       <%= simple_format h(@book.summary) %>
     <hr>  
+
+  <% if current_user.curator? %>
+    <%= link_to 'Edit book information', edit_book_path(@book) %>
+    <br>
+  <% end %>
+
     <div class="prev-next">
       <% if @previous %>
         <%= link_to '< Previous', @previous %>

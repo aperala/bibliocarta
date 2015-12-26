@@ -13,7 +13,7 @@ class Book < ActiveRecord::Base
 
   def avatar_remote_url(url_value)
     self.avatar = URI.parse(url_value)
-    # @avatar_remote_url = url_value
+    @avatar_remote_url = url_value
   end
 
   def add(place)

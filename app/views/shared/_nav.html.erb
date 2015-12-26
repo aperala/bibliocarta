@@ -1,20 +1,26 @@
-<div class="dropdown">
-  <div class="dropdown-container">
-    <p class="dropdown-button">Menu</p>
-      <ul class="dropdown-menu dropdown-select">
-      <% if current_user %>
-        <li><%= link_to "Home", root_path, class: "dropdown-link" %></li>
-        <li><%= link_to "My Page", user_path(current_user), class: "dropdown-link" %></li>
-        <li><%= link_to "Edit my profile", edit_user_registration_path, class: "dropdown-link" %></li>
-        <li><%= link_to "Find Books on Map", places_path, class: "dropdown-link"  %></li>
-        <li><%= link_to "See All Books", books_path, class: "dropdown-link"  %></li>
-        <li><%= link_to "All Users", users_path, class: "dropdown-link" %></li>
-        <li><%= link_to "Logout", destroy_user_session_path, class: "dropdown-link", method: :delete %></li>
-      <% else %>
-        <li><%= link_to "Home", root_path, class: "dropdown-link"  %></li>
-        <li><%= link_to "Login", new_user_session_path, class: "dropdown-link" %></li>
-        <li><%= link_to "Sign Up", new_user_registration_path, class: "dropdown-link" %></li>
+<button type="button" class="js-menu-trigger sliding-panel-button">
+  Menu
+</button>
+
+<nav class="js-menu sliding-panel-content">
+  <ul>
+    <% if current_user %>
+      <li><%= link_to "World Map", places_path %></li>
+      <li><%= link_to "All Books", books_path %></li>
+      <li><%= link_to "All Users", users_path %></li>
+      <li><%= link_to "Edit my profile", edit_user_registration_path %></li>
+      <% if current_user.curator? %>
+        <li class="curator-link"><%= link_to "Add a Book", new_book_path %></li>
+        <li class="curator-link"><%= link_to "Add a Place", new_place_path %></li>
+        <li class="curator-link"><%= link_to "Create a new BookPlace", new_book_place_path %></li>
       <% end %>
-      </ul>
-  </div>
-</div>
+      <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+      <% else %>
+        <li><%= link_to "Login", new_user_session_path %></li>
+        <li><%= link_to "Sign Up", new_user_registration_path %></li>
+      <% end %>
+    <li><%= link_to "Home", root_path %></li>
+  </ul>
+</nav>
+
+<div class="js-menu-screen sliding-panel-fade-screen"></div>
