@@ -8,6 +8,7 @@
       <li><%= link_to "World Map", places_path %></li>
       <li><%= link_to "All Books", books_path %></li>
       <li><%= link_to "All Users", users_path %></li>
+      <li><%= link_to "My Map", user_path(current_user) %></li>
       <li><%= link_to "Edit my profile", edit_user_registration_path %></li>
       <% if current_user.curator? %>
         <li class="curator-link"><%= link_to "Add a Book", new_book_path %></li>

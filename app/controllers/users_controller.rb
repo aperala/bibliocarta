@@ -41,6 +41,6 @@ class UsersController < ApplicationController
   end
 
   def user_bookplace_list(id)
-    @user.books.joins(:places).where('places.id = ?', id).select("title").map { |b| '<li>' + b.title.titleize + '</li>' }
+    @user.books.joins(:places).where('places.id = ?', id).select("title", "id").map { |b| '<li><a href="/books/' +b.id.to_s + '" target="_blank">' + b.title.titleize + '</a></li>' }
   end
 end
