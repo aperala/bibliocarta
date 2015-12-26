@@ -7,6 +7,9 @@ $ ->
     popupContent = '<div class="popup">' +
                       '<a href="/places/' + properties?.id + '" target="_blank">' +
                       '<h4>' + properties?.name + '</h4>' +
+                      '</a>' +
+                      '<p>Books logged: ' + properties?.total +
+                      '<ul>' + properties?.titles + '</ul></p>' +
                     '</div>'
 
     if marker.bindPopup?

@@ -19,9 +19,9 @@
       <% end %>
     </p>
       <hr>
-      <% @user.books.order("title asc").each do |book| %>
-          <span class="book-title"><%= link_to book.title.titleize, book_path(book), target: "_blank" %></span> by 
-          <%= book.author.titleize %>
+      <% @user.books.each do |book| %>
+          <span class="book-title"><%= link_to book.title.titleize, book_path(book), target: "_blank" %></span> 
+          <%= book.places.first.name.titleize %>
           <br>
       <% end %>
     </p>
