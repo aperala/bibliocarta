@@ -13,18 +13,14 @@
     <p>
       Total locations: <%= @user.places.length %> <br>
       Total books: <%= @user.books.length %> 
-    <p> 
+    </p>
+    <hr>
+    <p id="bio">
+      <%= @user.bio %>
+    </p>
       <% if @user == current_user %>
         <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Check%20out%20my%20Bookmark%20map.">Tweet</a>
       <% end %>
-    </p>
-      <hr>
-      <% @user.books.each do |book| %>
-          <span class="book-title"><%= link_to book.title.titleize, book_path(book), target: "_blank" %></span> 
-          <%= book.places.first.name.titleize %>
-          <br>
-      <% end %>
-    </p>
   </div>
 </div>
 

@@ -21,6 +21,11 @@
       <%= f.text_field :location, placeholder: "e.g., New York" %>
     </div>
 
+    <div class="field">
+      <%= f.label :bio %>
+      <%= f.text_area :bio, placeholder: "Tell us a little about yourself" %>
+    </div>
+
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
     <% end %>

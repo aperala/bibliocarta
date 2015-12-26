@@ -28,6 +28,10 @@ body {
     &:hover {
       color: $gold;
     }
+
+    h2 {
+      font-size: 20px;
+    }
 }
 
 .custom-popup .leaflet-popup-tip-container {
@@ -40,6 +44,10 @@ body {
   border-right:15px solid transparent;
   border-top:15px solid $dark-gray;
   }
+
+.user-books {
+  font-style: italic;
+}
 
 /*mapbox map styling*/
 #map { position:absolute; right: 0; top:0; bottom:0; width: 80%; }
