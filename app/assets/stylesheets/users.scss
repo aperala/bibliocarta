@@ -102,15 +102,6 @@
   background-color: $dark-gray; 
   color: white;
 
-    a {
-  color: $gold;
-  font-weight: bold;
-
-    &:hover {
-      color: $green;
-    }
-  }
-
   .user-profile {
     margin: 20px 5px 0 15px;
     overflow: scroll;
@@ -130,9 +121,13 @@
   }
 }
 
+.sliding-panel-button {
+  background-color: inherit;
+}
+
 .sliding-panel-content {  
   $action-color: #477DCA !default;
-  $dark-gray: #333 !default;
+  $dark-gray: #003366 !default;
   $sliding-panel-border-color: $dark-gray;
   $sliding-panel-background: lighten($sliding-panel-border-color, 5%);
   $sliding-panel-color: #fff;
@@ -180,4 +175,5 @@
   &.is-visible {
     @include transform(translateX(0));
   }
+
 }

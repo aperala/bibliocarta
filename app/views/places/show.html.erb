@@ -1,11 +1,7 @@
 <%= render 'refills/navigation' %>
 <div class="side-image">
-  <div class="images-wrapper"></div>
-    <div class="side-image-content">
-      <h4>Location Guide</h4>
-      <h1><%= @place.name %></h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam assumenda nihil suscipit obcaecati sit, cum quod corporis adipisci ipsam, fugiat, quae error. Eaque commodi, dicta quidem explicabo mollitia inventore quibusdam.
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam assumenda nihil suscipit obcaecati sit, cum quod corporis adipisci ipsam, fugiat, quae error. Eaque commodi, dicta quidem explicabo mollitia inventore quibusdam.</p>
+  <div class="side-image-content">
+    <h1><%= @place.name %></h1>   
   </div>
 </div>
 
@@ -14,6 +10,7 @@
   <% @place.books.each do |book| %>
     <div class="book-index-card">
       <%= image_tag(book.avatar.url(:thumb), class: "small-cover") %> 
+      <br>
       <div class="title-info">
         <h3>
           <%= link_to (book.title).titleize, book_path(book.id), target: "_blank" %>
@@ -23,7 +20,7 @@
           <%= book.genre.upcase %> <br>
         </p>
       </div>
-      <%= simple_format h(book.summary) %>
+      <%= simple_format h truncate(book.summary, length: 250) %>
         <div>
           <%= button_to "Add to my passport", user_books_path(book_id: book.id), method: :post, remote: true %>
           <div id="checked-book" style="display:none; background-color: SkyBlue;">This book has been added to your passport</div>

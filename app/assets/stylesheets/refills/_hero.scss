@@ -39,12 +39,16 @@
       text-align: center;
       
       h1 {
-        font-size: 6em;
+        font-size: 5em;
         font-weight: bold;
         letter-spacing: 3px;
         margin-bottom: 0.5em;
         text-transform: uppercase;
         vertical-align: center;
+
+        @include media(min-width 320px max-width 480px, 6) {
+          font-size: 3em;
+        }
       }
 
       h2 {
