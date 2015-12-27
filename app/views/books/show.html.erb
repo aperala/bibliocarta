@@ -13,7 +13,7 @@
       <%= @book.author.titleize %> <br>
     </p>
     <p>
-      <%= @book.genre.upcase %>
+      <%= @book.genre? ? @book.genre.upcase : "GENERAL" %>
     </p>
     <hr>
   </div>
@@ -45,5 +45,3 @@
   </div>
 
 </div>
-
-

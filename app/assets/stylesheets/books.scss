@@ -31,6 +31,8 @@ article.book-about {
 div.book-cover {
   @include span-columns(3);
   margin-top: 50px;
+  min-width: 300px;
+  min-height: 300px;
 }
 
 div.book-info {

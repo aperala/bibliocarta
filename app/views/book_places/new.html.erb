@@ -8,12 +8,12 @@
     
     <p>
       <%= f.label :title %>
-      <%= f.collection_select(:book_id, Book.all, :id, :title) %>
+      <%= f.collection_select(:book_id, Book.order('title ASC').all, :id, :title) %>
     </p>
 
     <p>
       <%= f.label :place %>
-      <%= f.collection_select(:place_id, Place.all, :id, :name) %>
+      <%= f.collection_select(:place_id, Place.order('name ASC').all, :id, :name) %>
     </p>
 
     <p>

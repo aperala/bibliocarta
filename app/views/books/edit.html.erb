@@ -2,3 +2,7 @@
 <h1 class="admin-form-headline">Admin Only: Edit Book Information</h1>
 
 <%= render 'form' %>
+
+<div class="delete-link">
+  <%= link_to "Delete this book", book_path(@book), method: :delete %>
+</div>
