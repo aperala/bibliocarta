@@ -1,4 +1,12 @@
-$ -> 
+$(".users.show").ready -> 
+  L.mapbox.accessToken = '<%= ENV["MAPBOX_TOKEN"] %>'
+  map = L.mapbox.map('map_user', 'anitap.2b45a7d5',
+                      continuousWorld: false
+                      noWrap: true
+                      )
+                  .setView([40, 0], 2)
+  map.touchZoom.disable()
+  map.scrollWheelZoom.disable()
 
   setPopups = (e) ->
     marker = e.layer
@@ -18,16 +26,9 @@ $ ->
         minWidth: 200
 
   $.getJSON '<%= Rails.application.routes.url_helpers.user_path([:id]) %>'.json, (geojsonuser) ->
-    L.mapbox.accessToken = '<%= ENV["MAPBOX_TOKEN"] %>'
-    map = L.mapbox.map('map_user', 'anitap.2b45a7d5', tileLayer:
-                      continuousWorld: false
-                      noWrap: true
-                      )
-                  .setView([40, 0], 2)
-                  .on('layeradd', setPopups)
-                  .featureLayer.setGeoJSON(geojsonuser)
-                  .dragging.disable()
-                  .touchZoom.disable()
+    myLayer = L.mapbox.featureLayer().addTo(map)
+    myLayer.on('layeradd', setPopups)
+    myLayer.setGeoJSON(geojsonuser)
 
   window.twttr = ((d, s, id) ->
     js = undefined
@@ -48,8 +49,3 @@ $ ->
     t
   )(document, 'script', 'twitter-wjs')
 
-  $('.sliding-panel-button,.sliding-panel-fade-screen,.sliding-panel-close').on 'click touchstart', (e) ->
-    $('.sliding-panel-content,.sliding-panel-fade-screen').toggleClass 'is-visible'
-    e.preventDefault()
-    return
-  return

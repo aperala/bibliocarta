@@ -311,6 +311,21 @@ header.navigation {
         @include box-sizing(border-box);
         display: block;
       }
+
+    a {
+      color: $navigation-color;
+      display: inline-block;
+      font-weight: 400;
+
+      @include media ($horizontal-bar-mode) {
+        padding-right: 1em;
+      }
+
+      &:focus,
+      &:hover {
+        color: $navigation-color-hover;
+      }
+    }
     }
   }
 }

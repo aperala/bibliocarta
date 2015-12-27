@@ -1,6 +1,16 @@
-$ -> 
-  
-    setPopups = (e) ->
+$(".places.index").ready ->
+  L.mapbox.accessToken = '<%= ENV["MAPBOX_TOKEN"] %>'
+  map = L.mapbox.map('map_books', 'anitap.2b45a7d5', 
+                        continuousWorld: false
+                        noWrap: true
+                        zoomControl: true
+                        )
+                    .setView([41, 0], 2)
+  map.touchZoom.disable()
+  map.scrollWheelZoom.disable()
+      
+
+  setPopups = (e) ->
       marker = e.layer
       properties = marker.feature?.properties
 
@@ -19,18 +29,8 @@ $ ->
           closeButton: true
           minWidth: 200
 
-
     $.getJSON '/places.json', (geojson) ->
-      L.mapbox.accessToken = '<%= ENV["MAPBOX_TOKEN"] %>'
-      map = L.mapbox.map('map', 'anitap.2b45a7d5', tileLayer:
-                        continuousWorld: false
-                        noWrap: true
-                        zoomControl: false
-                        )
-                    .setView([40, 0], 2)
-                    .on('layeradd', setPopups)
-                    .featureLayer.setGeoJSON(geojson)
-                    .dragging.disable()
-                    .touchZoom.disable()
-                    .scrollWheelZoom.disable()
+      myLayer = L.mapbox.featureLayer().addTo(map)
+      myLayer.on 'layeradd', setPopups
+      myLayer.setGeoJSON(geojson)
       

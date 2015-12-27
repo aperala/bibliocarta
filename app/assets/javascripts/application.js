@@ -13,5 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require leaflet
+//= require jquery-readyselector
 //= require_tree .
-
