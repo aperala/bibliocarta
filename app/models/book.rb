@@ -24,6 +24,14 @@ class Book < ActiveRecord::Base
     self.places.destroy(place)
   end
 
+  def previous
+    self.class.where('title < ?', title).order(title: :desc).first
+  end
+
+  def next 
+    self.class.where('title > ?', title).order(title: :asc).first
+  end
+
   def self.to_csv
     CSV.generate do |csv|
       csv << column_names

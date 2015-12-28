@@ -29,12 +29,12 @@
   <% end %>
 
     <div class="prev-next">
-      <% if @previous %>
-        <%= link_to '< Previous', @previous %>
+      <% if @book.previous %>
+        <%= link_to '< Previous', @book.previous %>
       <% end %>
       <%= link_to 'Return to all books', books_path %>
-      <% if @next %>
-        <%= link_to 'Next >', @next  %>
+      <% if @book.next %>
+        <%= link_to 'Next >', @book.next  %>
       <% end %>
     </div>
   </article>

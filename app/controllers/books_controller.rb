@@ -12,8 +12,6 @@ class BooksController < ApplicationController
   end
 
   def show
-    @previous = Book.where("id < ?", params[:id]).order(:id).last   
-    @next = Book.where("id > ?", params[:id]).order(:id).first 
   end
 
   def new

@@ -2,7 +2,7 @@
 
 <div class="container">
 <h1 class="form-headline">Books from Everywhere</h1>
-  <% @books.order("author asc").each do |book| %>
+  <% @books.order("title asc").each do |book| %>
     <div class="book-index-card">
     <%= image_tag(book.avatar.url(:thumb)) %>
       <p class="attribution">
