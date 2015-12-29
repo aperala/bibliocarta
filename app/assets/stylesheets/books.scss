@@ -134,3 +134,6 @@ div.visa {
   @include span-columns(3);
 }
 
+.reader-list li {
+  display: inline;
+}

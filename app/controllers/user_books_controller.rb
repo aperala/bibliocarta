@@ -8,7 +8,9 @@ class UserBooksController < ApplicationController
   def create
     @book = Book.find(params[:book_id])
     @user = current_user
-    @user.books << @book
+    if !@user.books.include?(@book)
+      @user.books << @book
+    end
     respond_to do |format|
       format.html
       format.js

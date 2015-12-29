@@ -17,6 +17,7 @@ class BooksController < ApplicationController
   end
 
   def show
+    @readers = User.joins(:books).where(books: {id: @book.id}).select('id', 'username')
   end
 
   def new
@@ -66,5 +67,4 @@ class BooksController < ApplicationController
   def book_params
     params.require(:book).permit(:title, :author, :isbn, :genre, :summary, :avatar, :avatar_file_name)
   end
-
 end

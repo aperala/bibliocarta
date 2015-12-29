@@ -21,6 +21,14 @@
   <article class="book-about">
     <h2>About the Book</h2>
       <%= simple_format h(@book.summary) %>
+    <h3>Who's Read <span class="book-title"><%= @book.title.titleize %></span>:</h3>
+      <ul class="reader-list">
+        <% @readers.each do |reader| %>
+        <li>
+          <%= link_to reader.username, user_path(reader.id) %>
+        </li>
+        <% end %>
+      </ul>
     <hr>  
 
   <% if current_user.curator? %>
@@ -40,8 +48,12 @@
   </article>
 
   <div class="visa">
-    <%= button_to "Add to my collection", user_books_path(book_id: @book.id), method: :post, remote: true %>
-    <div id="checked-book" style="display:none; background-color: SkyBlue;">This book has been added to your passport</div>
+    <% if !current_user.books.include?(@book) %> 
+      <%= button_to "Add to my collection", user_books_path(book_id: @book.id), method: :post, remote: true %>
+      <div id="checked-book" style="display:none; background-color: SkyBlue;">This book has been added to your collection</div>
+    <% else %>
+      <p>This book is in your collection</p>
+     <% end %>
   </div>
 
 </div>
