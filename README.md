@@ -1,6 +1,6 @@
 # README
 
-A ‘book-map’ Rails app that lets users log in, find books by place/setting, and save books to their ‘passport’ to create a map of books they have read keyed to places where the books take place or are about. 
+A ‘book-map’ Rails app that lets users log in, find books by place/setting, and save books to create a map of books they have read. 
 
 * Ruby 2.2.1
 
@@ -11,4 +11,5 @@ _System dependencies:_
   * 'paperclip', '~> 4.3'
   * 'geocoder'
   * 'leaflet-rails'
+  * 'rails4-autocomplete'
   

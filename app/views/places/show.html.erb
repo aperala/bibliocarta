@@ -13,7 +13,7 @@
       <br>
       <div class="title-info">
         <h3>
-          <%= link_to (book.title).titleize, book_path(book.id), target: "_blank" %>
+          <%= link_to (book.title).titleize, book_path(book.id) %>
         </h3>
         <p>
           <%= book.author.titleize %> <br>
@@ -22,8 +22,12 @@
       </div>
       <%= simple_format h truncate(book.summary, length: 250) %>
         <div>
-          <%= button_to "Add to my passport", user_books_path(book_id: book.id), method: :post, remote: true %>
-          <div id="checked-book" style="display:none; background-color: SkyBlue;">This book has been added to your passport</div>
+          <% if !current_user.books.include?(book) %> 
+            <%= button_to "Add to my collection", user_books_path(book_id: book.id), method: :post, remote: true %>
+            <div id="checked-book" style="display:none; background-color: SkyBlue;">This book has been added to your collection</div>
+          <% else %>
+            <h6>In your collection</h6>
+          <% end %>
         </div>
     </div>
   <% end %>
