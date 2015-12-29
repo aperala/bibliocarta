@@ -8,7 +8,7 @@ class BooksController < ApplicationController
     if params[:search]
       @books = Book.search(params[:search]).order("title ASC")
     else
-      @books = Book.all.order("title ASC")
+      @books = Book.paginate(:page => params[:page], :per_page => 24).order('title ASC')
     end
     respond_to do |format|
       format.html

@@ -29,3 +29,7 @@
   </div>
 
 </div>
+
+<% if !params[:search] %>
+  <%= will_paginate @books %>
+<% end %>

@@ -71,12 +71,41 @@
   }
 }
 
-#photo-credit {
-  height: 100px;
+.footer-2 {
+  $base-spacing: 1.5em !default;
+  $medium-screen: em(640) !default;
+  $large-screen: em(860) !default;
+  $footer-text-color: rgba(255,255,255,0.7);
+
+  background: $dark-gray;
+  padding: $base-spacing;
   width: 100%;
-  position: absolute;
-  padding: 20px 0;
+  display: inline-block;
   text-align: center;
-  background-color: $dark-gray;
-  color: white;
+  color: $footer-text-color;
+
+  a {
+      color: $footer-text-color;
+      display: inline-block;
+      font-weight: 400;
+
+      &:focus,
+      &:hover {
+        color: $green;
+      }
+    }
+
+  ul {
+    line-height: 1.5em;
+    margin: 0 0 1em 0;
+    padding: 0;
+    
+    @include media($large-screen) {
+      float: left;
+      line-height: 1.8em;
+      margin-left: 1em;
+      margin-bottom: 0;
+    }
+  }
+
 }
