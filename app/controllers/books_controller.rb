@@ -1,10 +1,15 @@
 class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy]
   before_filter :is_curator, only: [:new, :create, :import, :edit, :destroy]
+  autocomplete :book, :title, :full => true, :display_value => :prettify
 
   def index
-    @books = Book.all
     @title = "All Books"
+    if params[:search]
+      @books = Book.search(params[:search]).order("title ASC")
+    else
+      @books = Book.all.order("title ASC")
+    end
     respond_to do |format|
       format.html
       format.csv {render text: @books.to_csv}

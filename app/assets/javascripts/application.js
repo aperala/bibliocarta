@@ -14,4 +14,6 @@
 //= require jquery_ujs
 //= require leaflet
 //= require jquery-readyselector
+//= require jquery-ui/autocomplete
+//= require autocomplete-rails
 //= require_tree .

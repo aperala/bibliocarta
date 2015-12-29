@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   #   resources :products
   resources :books do
     collection { post :import }
+    get :autocomplete_book_title, :on => :collection
   end
 
   resources :places do

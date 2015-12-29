@@ -22,7 +22,8 @@ gem 'bitters'
 gem 'refills'
 gem 'figaro'
 gem 'aws-sdk', '< 2.0'
-
+gem 'jquery-ui-rails'
+gem 'rails4-autocomplete'
 gem 'rails_12factor', group: :production
 gem 'puma'
 

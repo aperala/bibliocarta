@@ -1,19 +1,31 @@
 <%= render 'refills/navigation' %>
 
 <div class="container">
-<h1 class="form-headline">Books from Everywhere</h1>
-  <% @books.order("title asc").each do |book| %>
-    <div class="book-index-card">
-    <%= image_tag(book.avatar.url(:thumb)) %>
-      <p class="attribution">
-        <%= link_to book.title.titleize, book_path(book) %> <br>
-        <%= book.author.titleize %> <br>
-        <%= book.genre.downcase %> <br>
-          <% book.places.order("name asc").each do |place| %> 
-            <%= place.name.titleize %>
-          <% end %>
-        <br>
-      </p>
-    </div>
-  <% end %>
+  <h1 class="form-headline">Books from Everywhere</h1>
+  
+  <div class="books-search">
+
+    <%= form_tag(books_path, :method => "get", id: "search-form") do %>
+    <%= autocomplete_field_tag :search, params[:search], autocomplete_book_title_books_path, {:id_element => '', :update_elements => {}, class: "search-query", placeholder: "Enter a search term", type: "search", autofocus: true} %>  
+    <%= submit_tag "Search", id: "book-search-btn" %>
+    <%end%>
+  </div>
+
+  <div class="books-grid">
+    <% @books.each do |book| %>
+      <div class="book-index-card">
+      <%= image_tag(book.avatar.url(:thumb)) %>
+        <p class="attribution">
+          <%= link_to book.title.titleize, book_path(book) %> <br>
+          <%= book.author.titleize %> <br>
+          <%= book.genre.downcase %> <br>
+            <% book.places.order("name asc").each do |place| %> 
+              <%= place.name.titleize %>
+            <% end %>
+          <br>
+        </p>
+      </div>
+    <% end %>
+  </div>
+
 </div>

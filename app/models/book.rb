@@ -32,6 +32,14 @@ class Book < ActiveRecord::Base
     self.class.where('title > ?', title).order(title: :asc).first
   end
 
+  def self.search(query)
+    where("title ~~* ?", "%#{query}%") 
+  end
+
+  def prettify
+    self.title.titleize
+  end
+
   def self.to_csv
     CSV.generate do |csv|
       csv << column_names
@@ -46,4 +54,5 @@ class Book < ActiveRecord::Base
       Book.create! row.to_hash
     end
   end
+
 end
