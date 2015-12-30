@@ -31,7 +31,7 @@
       </ul>
     <hr>  
 
-  <% if current_user.curator? %>
+  <% if user_signed_in? && current_user.curator? %>
     <%= link_to 'Edit book information', edit_book_path(@book) %>
     <br>
   <% end %>
@@ -47,13 +47,14 @@
     </div>
   </article>
 
-  <div class="visa">
-    <% if !current_user.books.include?(@book) %> 
-      <%= button_to "Add to my collection", user_books_path(book_id: @book.id), method: :post, remote: true %>
-      <div id="checked-book" style="display:none; background-color: SkyBlue;">This book has been added to your collection</div>
-    <% else %>
-      <h6>In your collection</h6>
-     <% end %>
-  </div>
+    <div class="visa">
+      <% if user_signed_in? && current_user.books.include?(@book) %> 
+        <%= button_to "Add to my collection", user_books_path(book_id: @book.id), method: :post, remote: true %>
+        <div id="checked-book" style="display:none; background-color: SkyBlue;">This book has been added to your collection</div>
+      <% else %>
+        <h6>In your collection</h6>
+       <% end %>
+    </div>
+
 
 </div>
