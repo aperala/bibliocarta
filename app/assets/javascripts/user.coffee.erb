@@ -13,7 +13,7 @@ $(".c-users.a-show").ready ->
     properties = marker.feature?.properties
 
     popupContent = '<div class="popup">' +
-                      '<a href="/places/' + properties?.id + '" target="_blank">' +
+                      '<a href="/places/' + properties?.id + '">' +
                       '<h2>' + properties?.name + '</h2>' +
                       '</a>' +
                       '<p>Books logged: ' + properties?.total +
@@ -25,7 +25,7 @@ $(".c-users.a-show").ready ->
         closeButton: true
         minWidth: 200
 
-  $.getJSON '<%= Rails.application.routes.url_helpers.user_path([:id]) %>'.json, (geojsonuser) ->
+  $.getJSON '<%= Rails.application.routes.url_helpers.user_path([:id]) %>'.json + new Date().getTime(), (geojsonuser) ->
     myLayer = L.mapbox.featureLayer().addTo(map)
     myLayer.on('layeradd', setPopups)
     myLayer.setGeoJSON(geojsonuser)

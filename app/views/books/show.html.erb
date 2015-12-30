@@ -40,21 +40,22 @@
       <% if @book.previous %>
         <%= link_to '< Previous', @book.previous %>
       <% end %>
-      <%= link_to 'Return to all books', books_path %>
+      <%= link_to 'All books', books_path %>
       <% if @book.next %>
         <%= link_to 'Next >', @book.next  %>
       <% end %>
     </div>
   </article>
 
+  <% if user_signed_in? %>
     <div class="visa">
-      <% if user_signed_in? && current_user.books.include?(@book) %> 
+      <% if user_signed_in? && !current_user.books.include?(@book) %> 
         <%= button_to "Add to my collection", user_books_path(book_id: @book.id), method: :post, remote: true %>
         <div id="checked-book" style="display:none; background-color: SkyBlue;">This book has been added to your collection</div>
       <% else %>
         <h6>In your collection</h6>
        <% end %>
     </div>
-
+  <% end %>
 
 </div>

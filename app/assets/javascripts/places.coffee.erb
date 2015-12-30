@@ -15,11 +15,10 @@ $(".c-places.a-index").ready ->
       properties = marker.feature?.properties
 
       popupContent = '<div class="popup">' +
-                        '<a href="/places/' + properties?.id + '" target="_blank">' + 
-                        '<h4>' + properties?.name + '</h4>' +
-                        '</a>' +
+                        '<a href="/places/' + properties?.id + '">' + 
+                        properties?.name + '</a>' +
                         '<p>Top title: <em>' + properties?.title + '</em></p>' + 
-                        '<a href="/places/' + properties?.id + '" target="_blank">' + 
+                        '<a href="/places/' + properties?.id + '">' + 
                         'Total books: ' + properties?.books + 
                         '</a>' +
                       '</div>'
@@ -29,8 +28,12 @@ $(".c-places.a-index").ready ->
           closeButton: true
           minWidth: 200
 
-    $.getJSON '/places.json', (geojson) ->
-      myLayer = L.mapbox.featureLayer().addTo(map)
-      myLayer.on 'layeradd', setPopups
-      myLayer.setGeoJSON(geojson)
-      
+    $.ajax
+      cache: false 
+      url: '/places.json'
+      dataType: 'json'
+      success: (geojson) ->
+        myLayer = L.mapbox.featureLayer().addTo(map)
+        myLayer.on 'layeradd', setPopups
+        myLayer.setGeoJSON(geojson)
+        return
