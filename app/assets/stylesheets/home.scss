@@ -14,13 +14,15 @@
   @include display(flex);
   @include flex-wrap(wrap);
   margin-bottom: $base-line-height;
-  margin: 1em;
+  margin: 1.2em auto;
   overflow: auto;
   padding: 0;
+  max-width: 1100px;
 
   .bullet {
     @include flex-basis(20em);
     @include flex-grow(1);
+    margin: 1.2em;
   }
 
   .bullet-icon {
