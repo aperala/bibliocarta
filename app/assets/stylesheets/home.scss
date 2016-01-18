@@ -73,6 +73,16 @@
   }
 }
 
+#feature-bk {
+  background-color: Gainsboro;
+  background: url("http://images.randomhouse.com/cover/9781594483783") no-repeat center center;
+  height: 450px;
+}
+
+.side-image .feature-book {
+  margin-bottom: 0;
+}
+
 .footer-2 {
   $base-spacing: 1.5em !default;
   $medium-screen: em(640) !default;

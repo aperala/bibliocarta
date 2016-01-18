@@ -1,0 +1,1568 @@
+@charset "UTF-8";
+/* line 1, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/base/_buttons.scss */
+button, input[type="button"], input[type="reset"], input[type="submit"],
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+  background-color: #75A319;
+  border-radius: 3px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.75em 1em;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+/* line 21, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/base/_buttons.scss */
+button:hover, button:focus, input[type="button"]:hover, input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:focus,
+button:hover,
+button:focus {
+  background-color: #45610f;
+  color: #fff;
+}
+/* line 27, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/base/_buttons.scss */
+button:disabled, input[type="button"]:disabled, input[type="reset"]:disabled, input[type="submit"]:disabled,
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* line 1, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/base/_forms.scss */
+fieldset {
+  background-color: #dcdfe1;
+  border: 1px solid #C0C5CA;
+  width: 60%;
+  margin: 0 auto 0.75em;
+  padding: 1.5em;
+}
+/* line 8, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/base/_forms.scss */
+fieldset h2 {
+  text-align: center;
+}
+
+/* line 13, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/base/_forms.scss */
+input,
+label,
+select {
+  display: block;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1em;
+}
+
+/* line 21, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/base/_forms.scss */
+label {
+  font-weight: 600;
+  margin-bottom: 0.375em;
+}
+/* line 25, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/base/_forms.scss */
+label.required::after {
+  content: "*";
+}
+/* line 29, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/base/_forms.scss */
+label abbr {
+  display: none;
+}
+
+/* line 34, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/base/_forms.scss */
+input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]), textarea,
+select[multiple=multiple],
+textarea {
+  background-color: #fff;
+  border: 1px solid #C0C5CA;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1em;
+  margin-bottom: 0.75em;
+  padding: 0.5em;
+  transition: border-color;
+  width: 100%;
+}
+/* line 49, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/base/_forms.scss */
+input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="email"]:hover, input[type="month"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="time"]:hover, input[type="url"]:hover, input[type="week"]:hover, input:not([type]):hover, textarea:hover,
+select[multiple=multiple]:hover,
+textarea:hover {
+  border-color: #a4acb3;
+}
+/* line 53, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/base/_forms.scss */
+input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, input:not([type]):focus, textarea:focus,
+select[multiple=multiple]:focus,
+textarea:focus {
+  border-color: #75A319;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(101, 141, 22, 0.7);
+  outline: none;
+}
+
+/* line 60, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/base/_forms.scss */
+textarea {
+  resize: vertical;
+}
+
+/* line 64, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/base/_forms.scss */
+input[type="search"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+/* line 68, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/base/_forms.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+  margin-right: 0.375em;
+}
+
+/* line 74, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/base/_forms.scss */
+input[type="file"] {
+  padding-bottom: 0.75em;
+  width: 100%;
+}
+
+/* line 79, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/base/_forms.scss */
+select {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+  width: auto;
+}
+
+/* line 1, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/base/_lists.scss */
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 20, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/base/_lists.scss */
+dl {
+  margin-bottom: 0.75em;
+}
+/* line 23, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/base/_lists.scss */
+dl dt {
+  font-weight: bold;
+  margin-top: 0.75em;
+}
+/* line 28, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/base/_lists.scss */
+dl dd {
+  margin: 0;
+}
+
+/* line 1, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/base/_tables.scss */
+table {
+  -webkit-font-feature-settings: "kern", "liga", "tnum";
+  -moz-font-feature-settings: "kern", "liga", "tnum";
+  -ms-font-feature-settings: "kern", "liga", "tnum";
+  font-feature-settings: "kern", "liga", "tnum";
+  border-collapse: collapse;
+  margin: 0.75em 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+/* line 9, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/base/_tables.scss */
+th {
+  border-bottom: 1px solid #969fa7;
+  font-weight: 600;
+  padding: 0.75em 0;
+  text-align: left;
+}
+
+/* line 16, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/base/_tables.scss */
+td {
+  border-bottom: 1px solid #C0C5CA;
+  padding: 0.75em 0;
+}
+
+/* line 21, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/base/_tables.scss */
+tr,
+td,
+th {
+  vertical-align: middle;
+}
+
+/* line 1, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/base/_typography.scss */
+body {
+  -webkit-font-feature-settings: "kern", "liga", "pnum";
+  -moz-font-feature-settings: "kern", "liga", "pnum";
+  -ms-font-feature-settings: "kern", "liga", "pnum";
+  font-feature-settings: "kern", "liga", "pnum";
+  -webkit-font-smoothing: antialiased;
+  color: #003366;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+/* line 10, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/base/_typography.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1em;
+  line-height: 1.2;
+  margin: 0 0 0.75em;
+}
+
+/* line 22, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/base/_typography.scss */
+p {
+  margin: 0 0 0.75em;
+}
+
+/* line 26, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/base/_typography.scss */
+a {
+  color: #75A319;
+  text-decoration: none;
+  transition: color 0.1s linear;
+}
+/* line 31, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/base/_typography.scss */
+a:active, a:focus, a:hover {
+  color: #45610f;
+}
+/* line 37, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/base/_typography.scss */
+a:active, a:focus {
+  outline: none;
+}
+
+/* line 43, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/base/_typography.scss */
+hr {
+  border-bottom: 1px solid #C0C5CA;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: 1.5em 0;
+}
+
+/* line 51, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/base/_typography.scss */
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
+
+/* line 4, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/neat/grid/_box-sizing.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 9, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/neat/grid/_box-sizing.scss */
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+/*!
+ * jQuery UI Autocomplete 1.11.4
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/autocomplete/#theming
+ */
+/*
+ *= require jquery-ui/core
+ *= require jquery-ui/menu
+ *= require jquery-ui/theme
+ */
+/* line 16, /Users/anita/.rvm/gems/ruby-2.2.1/gems/jquery-ui-rails-5.0.5/app/assets/stylesheets/jquery-ui/autocomplete.css */
+.ui-autocomplete {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: default;
+}
+
+/* line 5, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/books.scss */
+div.container {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto;
+}
+/* line 20, /Users/anita/.rvm/gems/ruby-2.2.1/gems/bourbon-4.2.4/app/assets/stylesheets/addons/_clearfix.scss */
+div.container::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+/* line 11, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/books.scss */
+div.book-index-card {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  margin-bottom: 15px;
+}
+/* line 89, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/neat/grid/_span-columns.scss */
+div.book-index-card:last-child {
+  margin-right: 0;
+}
+/* line 78, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/neat/grid/_omega.scss */
+div.book-index-card:nth-child(4n) {
+  margin-right: 0;
+}
+/* line 83, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/neat/grid/_omega.scss */
+div.book-index-card:nth-child(4n+1) {
+  clear: left;
+}
+/* line 16, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/books.scss */
+div.book-index-card img {
+  vertical-align: top;
+}
+/* line 20, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/books.scss */
+div.book-index-card p.attribution {
+  display: inline-block;
+  max-width: 150px;
+}
+
+/* line 26, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/books.scss */
+.books-search {
+  width: 60%;
+  margin: 20px auto;
+}
+
+/* line 31, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/books.scss */
+#book-search-btn {
+  display: inline-block;
+  width: 80px;
+  position: relative;
+  background-color: #75A319;
+  border-radius: 3px;
+  border: none;
+  text-align: center;
+}
+
+/* line 41, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/books.scss */
+.ui-autocomplete {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  float: left;
+  display: none;
+  min-width: 160px;
+  _width: 160px;
+  padding: 4px 0;
+  margin: 2px 0 0 0;
+  list-style: none;
+  background-color: #fff;
+  border-color: #ccc;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-style: solid;
+  border-width: 1px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  *border-right-width: 2px;
+  *border-bottom-width: 2px;
+}
+/* line 70, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/books.scss */
+.ui-autocomplete .ui-menu-item > a.ui-corner-all {
+  display: block;
+  padding: 3px 15px;
+  clear: both;
+  font-weight: normal;
+  line-height: 18px;
+  color: #555555;
+  white-space: nowrap;
+}
+
+/* line 81, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/books.scss */
+.ui-widget-content .ui-state-focus {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #8fc71f;
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  background-image: none;
+}
+
+/* line 91, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/books.scss */
+.books-search input {
+  display: inline-block;
+  width: 70%;
+  font-size: 1em;
+  padding: .5em 1.3em;
+  background: transparent;
+  border: 1px solid #ddd;
+  border-radius: 2em;
+}
+
+/* line 101, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/books.scss */
+.books-search input:focus {
+  border-color: #A5CEF5;
+}
+
+/* line 107, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/books.scss */
+article.book-about {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+}
+/* line 89, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/neat/grid/_span-columns.scss */
+article.book-about:last-child {
+  margin-right: 0;
+}
+
+/* line 111, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/books.scss */
+div.book-cover {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  margin-top: 50px;
+  min-width: 300px;
+  min-height: 300px;
+}
+/* line 89, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/neat/grid/_span-columns.scss */
+div.book-cover:last-child {
+  margin-right: 0;
+}
+
+/* line 118, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/books.scss */
+div.book-info {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-top: 50px;
+}
+/* line 89, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/neat/grid/_span-columns.scss */
+div.book-info:last-child {
+  margin-right: 0;
+}
+
+/* line 123, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/books.scss */
+div.prev-next {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin: 10px auto;
+}
+/* line 89, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/neat/grid/_span-columns.scss */
+div.prev-next:last-child {
+  margin-right: 0;
+}
+/* line 127, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/books.scss */
+div.prev-next a {
+  margin-right: 10%;
+  text-align: center;
+}
+
+/* line 133, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/books.scss */
+div.visa {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+}
+/* line 89, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/neat/grid/_span-columns.scss */
+div.visa:last-child {
+  margin-right: 0;
+}
+
+/* line 137, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/books.scss */
+.reader-list li {
+  display: inline;
+}
+
+/* line 1, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+header.navigation {
+  background-color: #003366;
+  border-bottom: 1px solid #001a33;
+  min-height: 60px;
+  width: 100%;
+  z-index: 999;
+}
+/* line 9, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+header.navigation a {
+  text-decoration: none;
+}
+/* line 35, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+header.navigation .navigation-wrapper {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 9999;
+}
+/* line 20, /Users/anita/.rvm/gems/ruby-2.2.1/gems/bourbon-4.2.4/app/assets/stylesheets/addons/_clearfix.scss */
+header.navigation .navigation-wrapper::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 20, /Users/anita/.rvm/gems/ruby-2.2.1/gems/bourbon-4.2.4/app/assets/stylesheets/addons/_clearfix.scss */
+header.navigation .navigation-wrapper::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 42, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+header.navigation .logo {
+  float: left;
+  max-height: 60px;
+  padding-left: 1em;
+  padding-right: 2em;
+}
+/* line 48, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+header.navigation .logo img {
+  max-height: 60px;
+  padding: 0.8em 0;
+}
+/* line 56, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+header.navigation .navigation-menu-button {
+  color: rgba(255, 255, 255, 0.7);
+  display: block;
+  float: right;
+  font-weight: 700;
+  line-height: 60px;
+  margin: 0;
+  padding-right: 1em;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 56, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+  header.navigation .navigation-menu-button {
+    display: none;
+  }
+}
+/* line 70, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+header.navigation .navigation-menu-button:focus, header.navigation .navigation-menu-button:hover {
+  color: white;
+}
+/* line 78, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+header.navigation nav {
+  float: none;
+  min-height: 60px;
+  z-index: 9999999;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 78, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+  header.navigation nav {
+    float: left;
+  }
+}
+/* line 88, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+header.navigation ul.navigation-menu {
+  -webkit-transform-style: preserve-3d;
+  clear: both;
+  display: none;
+  margin: 0 auto;
+  overflow: visible;
+  padding: 0;
+  width: 100%;
+  z-index: 9999;
+}
+/* line 98, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+header.navigation ul.navigation-menu.show {
+  display: block;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 88, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+  header.navigation ul.navigation-menu {
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
+}
+/* line 111, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+header.navigation ul li.nav-link {
+  background: #003366;
+  display: block;
+  line-height: 60px;
+  overflow: hidden;
+  padding-right: 0.8em;
+  text-align: right;
+  width: 100%;
+  z-index: 9999;
+  font-size: 1em;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 111, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+  header.navigation ul li.nav-link {
+    background: transparent;
+    display: inline;
+    line-height: 60px;
+    text-decoration: none;
+    width: auto;
+  }
+}
+/* line 130, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+header.navigation ul li.nav-link a {
+  color: rgba(255, 255, 255, 0.7);
+  display: inline-block;
+  font-weight: 400;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 130, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+  header.navigation ul li.nav-link a {
+    padding-right: 1em;
+  }
+}
+/* line 139, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+header.navigation ul li.nav-link a:focus, header.navigation ul li.nav-link a:hover {
+  color: white;
+}
+/* line 146, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+header.navigation .active-nav-item a {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding-bottom: 3px;
+}
+/* line 153, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+header.navigation li.more.nav-link {
+  padding-right: 0;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 153, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+  header.navigation li.more.nav-link {
+    padding-right: 1em;
+  }
+}
+/* line 160, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+header.navigation li.more.nav-link > ul > li:first-child a {
+  padding-top: 1em;
+}
+/* line 164, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+header.navigation li.more.nav-link a {
+  margin-right: 1em;
+}
+/* line 168, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+header.navigation li.more.nav-link > a {
+  padding-right: 0.6em;
+}
+/* line 172, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+header.navigation li.more.nav-link > a:after {
+  position: absolute;
+  top: auto;
+  right: -0.4em;
+  bottom: auto;
+  left: auto;
+  content: '\25BE';
+  color: rgba(255, 255, 255, 0.7);
+}
+/* line 179, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+header.navigation li.more {
+  overflow: visible;
+  padding-right: 0;
+}
+/* line 183, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+header.navigation li.more a {
+  padding-right: 0.8em;
+}
+/* line 187, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+header.navigation li.more > a {
+  padding-right: 1.6em;
+  position: relative;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 187, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+  header.navigation li.more > a {
+    margin-right: 1em;
+  }
+}
+/* line 195, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+header.navigation li.more > a:after {
+  content: '›';
+  font-size: 1.2em;
+  position: absolute;
+  right: 0.5em;
+}
+/* line 203, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+header.navigation li.more:focus > .submenu, header.navigation li.more:hover > .submenu {
+  display: block;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 179, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+  header.navigation li.more {
+    padding-right: 0.8em;
+    position: relative;
+  }
+}
+/* line 214, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+header.navigation ul.submenu {
+  display: none;
+  padding-left: 0;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 214, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+  header.navigation ul.submenu {
+    left: -1em;
+    position: absolute;
+    top: 1.5em;
+  }
+}
+@media screen and (min-width: 53.75em) {
+  /* line 224, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+  header.navigation ul.submenu .submenu {
+    left: 11.8em;
+    top: 0;
+  }
+}
+/* line 231, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+header.navigation ul.submenu li {
+  display: block;
+  padding-right: 0;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 231, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+  header.navigation ul.submenu li {
+    line-height: 46.15385px;
+  }
+  /* line 238, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+  header.navigation ul.submenu li:first-child > a {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+  /* line 243, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+  header.navigation ul.submenu li:last-child > a {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    padding-bottom: 0.7em;
+  }
+}
+/* line 250, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+header.navigation ul.submenu li a {
+  background-color: #002b57;
+  display: inline-block;
+  text-align: right;
+  width: 100%;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 250, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+  header.navigation ul.submenu li a {
+    background-color: #003366;
+    padding-left: 1em;
+    text-align: left;
+    width: 12em;
+  }
+}
+/* line 268, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+header.navigation .navigation-tools {
+  background: #505050;
+  clear: both;
+  display: block;
+  height: 60px;
+  padding-left: 0.5em;
+  padding-right: 1em;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 268, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+  header.navigation .navigation-tools {
+    background: transparent;
+    clear: none;
+    float: right;
+  }
+}
+/* line 283, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+header.navigation .sign-up {
+  background-color: #477DCA;
+  border-radius: 3px;
+  border: 0;
+  color: white;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: bold;
+  padding: 7px 18px;
+  text-decoration: none;
+  background-clip: padding-box;
+  display: inline;
+  float: right;
+  font-size: 0.8em;
+  margin-top: 1em;
+  padding: 0.75em 1em;
+  text-transform: uppercase;
+}
+/* line 354, /Users/anita/.rvm/gems/ruby-2.2.1/gems/bourbon-4.2.4/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+header.navigation .sign-up:hover:not(:disabled) {
+  background-color: #578ad4;
+  cursor: pointer;
+}
+/* line 365, /Users/anita/.rvm/gems/ruby-2.2.1/gems/bourbon-4.2.4/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+header.navigation .sign-up:active:not(:disabled), header.navigation .sign-up:focus:not(:disabled) {
+  background-color: #3c71bb;
+  cursor: pointer;
+}
+/* line 59, /Users/anita/.rvm/gems/ruby-2.2.1/gems/bourbon-4.2.4/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+header.navigation .sign-up:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+/* line 295, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+header.navigation .search-bar {
+  color: #f0c84b;
+  float: right;
+  padding: 0.85em 0.6em 0.7em 0.6em;
+  width: 40%;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 295, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+  header.navigation .search-bar {
+    display: inline-block;
+    position: relative;
+    width: 10em;
+  }
+  /* line 310, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+  header.navigation .search-bar input {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+  }
+  /* line 315, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+  header.navigation .search-bar a {
+    color: rgba(255, 255, 255, 0.7);
+    display: inline-block;
+    font-weight: 400;
+  }
+}
+@media screen and (min-width: 53.75em) and (min-width: 53.75em) {
+  /* line 315, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+  header.navigation .search-bar a {
+    padding-right: 1em;
+  }
+}
+@media screen and (min-width: 53.75em) {
+  /* line 324, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+  header.navigation .search-bar a:focus, header.navigation .search-bar a:hover {
+    color: white;
+  }
+}
+/* line 332, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_navigation.scss */
+header.navigation .logged-in {
+  text-align: right;
+  padding: 0.85em 0.6em 0 0;
+}
+
+/* line 1, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_hero.scss */
+.hero {
+  background: url("newbookshelves.jpg"), -webkit-linear-gradient(-280deg, #20392B, #7F99BE), no-repeat #7F99BE scroll;
+  background: url("newbookshelves.jpg"), linear-gradient(10deg, #20392B, #7F99BE), no-repeat #7F99BE scroll;
+  background-color: #324766;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 580px;
+  padding-bottom: 3em;
+}
+/* line 22, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_hero.scss */
+.hero .hero-logo img {
+  height: 4em;
+  margin-bottom: 1em;
+}
+/* line 27, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_hero.scss */
+.hero .hero-inner {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  margin: auto;
+  padding: 3.5em;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* line 20, /Users/anita/.rvm/gems/ruby-2.2.1/gems/bourbon-4.2.4/app/assets/stylesheets/addons/_clearfix.scss */
+.hero .hero-inner::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 20, /Users/anita/.rvm/gems/ruby-2.2.1/gems/bourbon-4.2.4/app/assets/stylesheets/addons/_clearfix.scss */
+.hero .hero-inner::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 38, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_hero.scss */
+.hero .hero-inner .hero-copy {
+  text-align: center;
+}
+/* line 41, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_hero.scss */
+.hero .hero-inner .hero-copy h1 {
+  font-size: 5em;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+  vertical-align: center;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  /* line 41, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_hero.scss */
+  .hero .hero-inner .hero-copy h1 {
+    font-size: 3em;
+  }
+}
+/* line 54, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_hero.scss */
+.hero .hero-inner .hero-copy h2 {
+  font-size: 2em;
+  font-weight: bold;
+}
+/* line 59, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_hero.scss */
+.hero .hero-inner .hero-copy p {
+  font-weight: 200;
+  line-height: 1.4em;
+  margin: 0 auto 3em auto;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 59, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_hero.scss */
+  .hero .hero-inner .hero-copy p {
+    font-size: 1.1em;
+    max-width: 40%;
+  }
+}
+/* line 71, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/refills/_hero.scss */
+.hero .hero-inner button {
+  background-color: #477DCA;
+  border-radius: 3px;
+  border: 0;
+  color: white;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: bold;
+  padding: 7px 18px;
+  text-decoration: none;
+  background-clip: padding-box;
+  padding: 0.7em 1em;
+}
+/* line 354, /Users/anita/.rvm/gems/ruby-2.2.1/gems/bourbon-4.2.4/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+.hero .hero-inner button:hover:not(:disabled) {
+  background-color: #578ad4;
+  cursor: pointer;
+}
+/* line 365, /Users/anita/.rvm/gems/ruby-2.2.1/gems/bourbon-4.2.4/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+.hero .hero-inner button:active:not(:disabled), .hero .hero-inner button:focus:not(:disabled) {
+  background-color: #3c71bb;
+  cursor: pointer;
+}
+/* line 59, /Users/anita/.rvm/gems/ruby-2.2.1/gems/bourbon-4.2.4/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+.hero .hero-inner button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* line 7, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/home.scss */
+.bullets {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 1.5;
+  margin: 1.2em auto;
+  overflow: auto;
+  padding: 0;
+  max-width: 1100px;
+}
+/* line 22, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/home.scss */
+.bullets .bullet {
+  -webkit-flex-basis: 20em;
+  -moz-flex-basis: 20em;
+  flex-basis: 20em;
+  -ms-flex-preferred-size: 20em;
+  -webkit-flex-grow: 1;
+  -moz-flex-grow: 1;
+  flex-grow: 1;
+  -ms-flex-positive: 1;
+  margin: 1.2em;
+}
+/* line 28, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/home.scss */
+.bullets .bullet-icon {
+  background: #75A319;
+  border-radius: 50%;
+  float: left;
+  height: 3.5em;
+  padding: 0.875em;
+  width: 3.5em;
+}
+/* line 37, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/home.scss */
+.bullets .bullet-icon-1 {
+  background: #75A319;
+}
+/* line 41, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/home.scss */
+.bullets .bullet-icon-2 {
+  background: #195ea3;
+}
+/* line 45, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/home.scss */
+.bullets .bullet-icon-3 {
+  background: #a3195e;
+}
+/* line 49, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/home.scss */
+.bullets .bullet-content {
+  margin-left: 4.9em;
+  margin-bottom: 2em;
+}
+/* line 54, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/home.scss */
+.bullets h2 {
+  border-bottom: 1px solid rgba(0, 51, 102, 0.2);
+  display: inline-block;
+  font-size: 1.4em;
+  margin: 0 0 0.58333em 0;
+  padding-top: 0.5em;
+}
+/* line 62, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/home.scss */
+.bullets li {
+  list-style: none;
+}
+/* line 66, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/home.scss */
+.bullets p {
+  color: #003366;
+  line-height: 1.5;
+}
+/* line 71, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/home.scss */
+.bullets img {
+  max-width: 100%;
+}
+
+/* line 76, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/home.scss */
+#feature-bk {
+  background-color: Gainsboro;
+  background: url("http://images.randomhouse.com/cover/9781594483783") no-repeat center center;
+  height: 450px;
+}
+
+/* line 82, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/home.scss */
+.side-image .feature-book {
+  margin-bottom: 0;
+}
+
+/* line 86, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/home.scss */
+.footer-2 {
+  background: #003366;
+  padding: 1.5em;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+}
+/* line 99, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/home.scss */
+.footer-2 a {
+  color: rgba(255, 255, 255, 0.7);
+  display: inline-block;
+  font-weight: 400;
+}
+/* line 104, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/home.scss */
+.footer-2 a:focus, .footer-2 a:hover {
+  color: #75A319;
+}
+/* line 110, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/home.scss */
+.footer-2 ul {
+  line-height: 1.5em;
+  margin: 0 0 1em 0;
+  padding: 0;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 110, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/home.scss */
+  .footer-2 ul {
+    float: left;
+    line-height: 1.8em;
+    margin-left: 1em;
+    margin-bottom: 0;
+  }
+}
+
+/* line 7, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/maps.css.scss */
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 13, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/maps.css.scss */
+.custom-popup .leaflet-popup-content-wrapper {
+  background: #003366;
+  color: #fff;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+/* line 21, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/maps.css.scss */
+.custom-popup .leaflet-popup-content-wrapper a {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* line 25, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/maps.css.scss */
+.custom-popup .popup a {
+  color: #fff;
+}
+/* line 28, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/maps.css.scss */
+.custom-popup .popup a:hover {
+  color: #f0c84b;
+}
+/* line 32, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/maps.css.scss */
+.custom-popup .popup a h2 {
+  font-size: 20px;
+}
+
+/* line 37, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/maps.css.scss */
+.custom-popup .leaflet-popup-tip-container {
+  width: 30px;
+  height: 15px;
+}
+
+/* line 42, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/maps.css.scss */
+.custom-popup .leaflet-popup-tip {
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #003366;
+}
+
+/* line 48, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/maps.css.scss */
+.user-books {
+  font-style: italic;
+}
+
+/*mapbox map styling*/
+/* line 53, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/maps.css.scss */
+#map_books {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 80%;
+}
+
+/* line 54, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/maps.css.scss */
+#map_user {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 80%;
+}
+
+/*sliding menu styling*/
+/* line 57, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/maps.css.scss */
+.sliding-panel-fade-screen {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  -webkit-transition: all 0.15s ease-out 0s;
+  -moz-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
+  background: black;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 999998;
+}
+/* line 65, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/maps.css.scss */
+.sliding-panel-fade-screen.is-visible {
+  opacity: 0.4;
+  visibility: visible;
+}
+
+/* line 71, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/maps.css.scss */
+.sliding-panel-button {
+  padding: 10px 16px;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+}
+/* line 78, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/maps.css.scss */
+.sliding-panel-button img {
+  height: 1.3em;
+}
+
+/* line 5, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/places.scss */
+.side-image {
+  background: #F9F9F9;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 5, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/places.scss */
+  .side-image {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+}
+/* line 23, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/places.scss */
+.side-image .images-wrapper {
+  background: url("antique-map.jpg"), -webkit-linear-gradient(#B5EBEB, #5DAC5D), no-repeat #B5EBEB scroll;
+  background: url("antique-map.jpg"), linear-gradient(#B5EBEB, #5DAC5D), no-repeat #B5EBEB scroll;
+  background-color: #B5EBEB;
+  background-size: cover;
+  border-bottom: 1px solid rgba(38, 74, 38, 0.2);
+  display: block;
+  min-height: 12em;
+  padding: 3em;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 23, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/places.scss */
+  .side-image .images-wrapper {
+    display: table-cell;
+    width: 33.33333%;
+    background-position: bottom;
+    background-size: cover;
+    border-right: 1px solid rgba(38, 74, 38, 0.2);
+  }
+}
+/* line 40, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/places.scss */
+.side-image .side-image-content {
+  display: table-cell;
+  width: 100%;
+  padding: 1em 1em 4em 1em;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 40, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/places.scss */
+  .side-image .side-image-content {
+    display: table-cell;
+    width: 66.66667%;
+    padding: 2em 4em 2em 4em;
+  }
+}
+/* line 49, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/places.scss */
+.side-image .side-image-content h1 {
+  margin-bottom: 0.9em;
+  font-size: 2em;
+}
+/* line 54, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/places.scss */
+.side-image .side-image-content h4 {
+  background: #e74c3c;
+  color: white;
+  display: inline-block;
+  font-size: 0.75em;
+  margin-bottom: 1.3em;
+  padding: 3px 8px;
+  text-transform: uppercase;
+}
+/* line 64, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/places.scss */
+.side-image .side-image-content p {
+  color: #003366;
+  line-height: 1.5;
+  font-size: 1.3em;
+  margin-bottom: 3em;
+}
+
+/* line 75, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/places.scss */
+div.book-index-card {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+}
+/* line 89, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/neat/grid/_span-columns.scss */
+div.book-index-card:last-child {
+  margin-right: 0;
+}
+/* line 78, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/neat/grid/_omega.scss */
+div.book-index-card:nth-child(4n) {
+  margin-right: 0;
+}
+/* line 83, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/neat/grid/_omega.scss */
+div.book-index-card:nth-child(4n+1) {
+  clear: left;
+}
+/* line 79, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/places.scss */
+div.book-index-card .small-cover {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 5px;
+  min-height: 100px;
+}
+/* line 86, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/places.scss */
+div.book-index-card .title-info {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* line 92, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/places.scss */
+div.place-links {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 82.94039%;
+  font-size: 20px;
+}
+/* line 89, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/neat/grid/_span-columns.scss */
+div.place-links:last-child {
+  margin-right: 0;
+}
+/* line 96, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/places.scss */
+div.place-links a {
+  margin-right: 30%;
+}
+
+/* line 102, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/places.scss */
+#places-index {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 20%;
+  background-color: #003366;
+  color: white;
+}
+/* line 111, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/places.scss */
+#places-index a {
+  color: white;
+  text-decoration: none;
+}
+/* line 116, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/places.scss */
+#places-index h1 {
+  font-size: 1.5em;
+  text-align: center;
+  color: #f0c84b;
+}
+/* line 122, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/places.scss */
+#places-index hr {
+  color: silver;
+}
+/* line 126, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/places.scss */
+#places-index .side {
+  width: 70%;
+  margin: 20px 5px 0 18px;
+  overflow: scroll;
+  font-size: 1.2em;
+}
+
+/* line 1, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/users.scss */
+.form-headline {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.5em;
+  color: #75A319;
+}
+
+/* line 8, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/users.scss */
+.cards {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+/* line 14, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/users.scss */
+.card {
+  /* @include flex-basis(10em);
+   @include flex-grow(1);*/
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background-color: #F0F8FF;
+  border-radius: 3px;
+  border: 1px solid #C0C5CA;
+  box-shadow: 0 2px 4px #e6e6e6;
+  cursor: pointer;
+  margin: 0 1em 1.5em 1em;
+  position: relative;
+}
+/* line 42, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/users.scss */
+.card .card-image {
+  overflow: hidden;
+  height: 180px;
+  max-height: 200px;
+  background-color: #F0F8FF;
+}
+/* line 48, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/users.scss */
+.card .card-image img {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  width: 100%;
+  opacity: 1;
+}
+/* line 57, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/users.scss */
+.card .card-header {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background-color: #F0F8FF;
+  border-bottom: 1px solid #C0C5CA;
+  border-radius: 3px 3px 0 0;
+  font-weight: bold;
+  line-height: 1.5em;
+  padding: 0.5em 0.75em;
+}
+/* line 67, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/users.scss */
+.card .card-copy {
+  font-size: 0.9em;
+  line-height: 1.5em;
+  padding: 0.75em 0.75em;
+}
+/* line 72, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/users.scss */
+.card .card-copy p {
+  margin: 0 0 0.75em;
+}
+/* line 77, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/users.scss */
+.card:focus, .card:hover {
+  cursor: pointer;
+}
+/* line 81, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/users.scss */
+.card:focus img, .card:hover img {
+  opacity: 0.7;
+}
+/* line 86, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/users.scss */
+.card:active {
+  background-color: #F0F8FF;
+}
+/* line 89, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/users.scss */
+.card:active .card-header {
+  background-color: #F0F8FF;
+}
+
+/* line 96, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/users.scss */
+#user-index {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 20%;
+  background-color: #003366;
+  color: white;
+}
+/* line 105, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/users.scss */
+#user-index .user-profile {
+  margin: 20px 5px 0 15px;
+  overflow: scroll;
+  font-size: 1.2em;
+}
+/* line 110, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/users.scss */
+#user-index .user-profile h1 {
+  color: #f0c84b;
+}
+/* line 114, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/users.scss */
+#user-index .user-profile hr {
+  width: 80%;
+}
+
+/* line 120, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/users.scss */
+.sliding-panel-button {
+  background-color: inherit;
+}
+
+/* line 124, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/users.scss */
+.sliding-panel-content {
+  position: fixed;
+  top: 0px;
+  right: auto;
+  bottom: 0px;
+  left: 0px;
+  height: 100%;
+  width: 220px;
+  -webkit-transform: translateX(-220px);
+  -moz-transform: translateX(-220px);
+  -ms-transform: translateX(-220px);
+  -o-transform: translateX(-220px);
+  transform: translateX(-220px);
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+  background: #004080;
+  z-index: 999999;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+/* line 144, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/users.scss */
+.sliding-panel-content ul {
+  padding: 0;
+  margin: 0;
+}
+/* line 149, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/users.scss */
+.sliding-panel-content li {
+  list-style: none;
+}
+/* line 153, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/users.scss */
+.sliding-panel-content li a {
+  border-bottom: 1px solid #003366;
+  color: #fff;
+  display: block;
+  font-weight: bold;
+  padding: 1em;
+  text-decoration: none;
+}
+/* line 161, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/users.scss */
+.sliding-panel-content li a:focus {
+  background-color: #004d99;
+}
+/* line 165, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/users.scss */
+.sliding-panel-content li a:hover {
+  background-color: #75A319;
+  color: #fff;
+}
+/* line 171, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/users.scss */
+.sliding-panel-content.is-visible {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+
+/* line 11, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/application.css.scss */
+.admin-form-headline {
+  margin: 20px 0;
+  font-size: 2em;
+  text-align: center;
+  color: #e74c3c;
+}
+
+/* line 18, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/application.css.scss */
+.book-title {
+  font-style: italic;
+}
+
+/* line 22, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/application.css.scss */
+.delete-link {
+  margin: 10px auto;
+  text-align: center;
+}
+/* line 26, /Users/anita/Documents/WDI/projects_WDI/bibliocarta/app/assets/stylesheets/application.css.scss */
+.delete-link a {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #e74c3c;
+}

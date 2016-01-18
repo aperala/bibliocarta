@@ -9,11 +9,20 @@
   <script src='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
   <link href='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
   <%= csrf_meta_tags %> 
+  <script type="text/javascript" src="https://launcher.zo.la/assets/zbwidget-launcher-0.1.0.js"></script>
+  <script type="text/javascript">
+    zb.init({
+        api_key: '42wpXPKi36QQyw2gpYDpOKIc',
+        store_uid: 'BIBLIOCA',
+        widget_launcher: 'https://launcher.zo.la'
+    });
+  </script>
 </head>
 <body class="c-<%= controller_name %> a-<%= action_name %>">
   
   <%= yield %>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
+
 </body>
 </html>
